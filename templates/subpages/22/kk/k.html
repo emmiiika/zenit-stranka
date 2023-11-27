@@ -1,0 +1,20 @@
+<h2 id="Nadpis">Kopčeky zmrzliny</h2>
+<p><em>Počet bodov: 80</em></p>
+<p>Vojtov obľúbený zmrzlinár má nezvyčajný spôsob podávania zmrzliny. Všetky nádoby so zmrzlinou sú uložené v jednom rade, každá s inou príchuťou. Nádoby sú očíslované <span class="math inline">\(1, 2, \ldots, n\)</span> zľava doprava. Každý zákazník si môže vybrať jednu nádobu (s číslom <span class="math inline">\(i\)</span>) a dostane kornútok so zmrzlinou z každej nádoby od <span class="math inline">\(1\)</span> do <span class="math inline">\(i\)</span>.</p>
+<p>Vojto má zmrzlinu veľmi rád, ale musí priznať, že niektoré príchuťe sú lepšie ako iné. Každej príchuti priradil kladné celé číslo ktoré predstavuje chutnosť. Chutnosť zmrzliny v nádobe s číslom <span class="math inline">\(i\)</span> je <span class="math inline">\(a_i\)</span>. Chutnosť kornútku je priemer chutností všetkých príchutí v ňom.</p>
+<p>Občas sa nejaká príchuť minie a zmrzlinár naplní nádobu na jej mieste inou príchuťou. Po každej zmene by Vojto chcel vedieť, aká je najväčšia možná chutnosť kornútku. Môžete mu pomôcť a povedať ktorú nádobu si má vybrať, aby dostal taký kornútok?</p>
+<h3 id="vstup-a-výstup">Vstup a výstup</h3>
+<p>Na prvom riadku sú dve celé čísla <span class="math inline">\(n\)</span> a <span class="math inline">\(q\)</span> (<span class="math inline">\(1 \leq n \leq 100\,000, 1 \leq q \leq 100\,000\)</span>), počet nádob a počet zmien príchute. Na nasledujúcom riadku je <span class="math inline">\(n\)</span> čísel <span class="math inline">\(a_1, a_2, \ldots, a_n\)</span> (<span class="math inline">\(1 \leq a_i \leq 10^8\)</span>) – chutnosť príchutí v nádobách.</p>
+<p>Na každom z nasledujúcich <span class="math inline">\(q\)</span> riadkov sú dve čísla <span class="math inline">\(p_j\)</span> a <span class="math inline">\(b_j\)</span> (<span class="math inline">\(1 \leq p_j \leq n, 1 \leq b_j \leq 10^8\)</span>) – chutnosť novej zmrzliny v nádobe <span class="math inline">\(p_j\)</span> je <span class="math inline">\(b_j\)</span>.</p>
+<p>Po každej zmene príchute, vypíšte jedno číslo – číslo nádoby, ktorú si má Vojto vybrať, ak chce kornútok s najväčšou možnou chutnosťou. Ak je takých viac, vypíšte tú s naj menším číslom.</p>
+<p>V prvej sade (10 bodov) platí <span class="math inline">\(n \leq 100, q \leq 100, a_i, b_j \leq 10^4\)</span>. V druhej a tretej sade (20 bodov) platí <span class="math inline">\(n \leq 1000, q \leq 1000\)</span>. V štvrtej až ôsmej sadách (50 bodov) niesu žiadne ďalšie obmedzenia.</p>
+<h3 id="príklad">Príklad</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>3 2
+3 2 5
+2 1
+2 3</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>1
+3</code></pre>
+<p><em>Po prvej zmene sú chutnosti: <span class="math inline">\([3, 1, 5]\)</span>. Chutnosti kornútkov sú: <span class="math inline">\([3, 2, 3]\)</span>, čiže Vojto dostane najlepší kornútok ak si zvolí prvú alebo tretiu nádobu, preto by si mal zvoliť prvú. Po druhej zmene sú chutnosti v nádobách: <span class="math inline">\([3, 3, 5]\)</span>, zatiaľ čo chutnosti kornútkov sú: <span class="math inline">\([3, 3, \frac{11}{3}]\)</span>. Vojto by si mal vybrať poslednú nádobu.</em></p>

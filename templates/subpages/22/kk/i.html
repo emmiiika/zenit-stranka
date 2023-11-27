@@ -1,0 +1,21 @@
+<h2 id="Nadpis">Irelevantný nadpis</h2>
+<p><em>Počet bodov: 55</em></p>
+<p>Niektorých ľudí zaujíma parita čísel… Ale tí ľudia sú hlupáci!! Všetci čo sa aspoň trochu vyznajú do čísel vedia, že oveľa zaujímavejšia vlastnosť je <em>purita</em> čísel. Párne čísla sú tie, ktoré vieme zapísať ako súčet dvoch rovnakých čísel. Púrne čísla sú tie, ktoré vieme zapísať ako súčet čísla a toho istého čísla s jednou odstránenou cifrou. Zatiaľčo párne čísla majú iba jedno takéto rozloženie na súčet, púrne ich môžu mať viac. Aby ste sa zblížili s púrnymi číslami a plne ocenili ich zaujímavosť, hlbokosť a účelnosť, za úlohu dostávate zistiť puritu viacerých čísel, teda koľkými spôsobmi sa dajú purálne rozložiť.</p>
+<h3 id="vstup-a-výstup">Vstup a Výstup</h3>
+<p>V prvom riadku vstupu je číslo <span class="math inline">\(1 \leq C \leq 1\,000\)</span> - počet čísel na vstupe. Nasleduje <span class="math inline">\(C\)</span> riadkov, na každom z nich jedno celé číslo <span class="math inline">\(c_i\)</span>.</p>
+<p>Pre každé z <span class="math inline">\(C\)</span> čísel vypíšte na výstup na jeden riadok jeho puritu a následne príslušne veľa riadkov tvaru “<code>x + y</code>” takých, že <span class="math inline">\(x+y=c_i\)</span> a <span class="math inline">\(y\)</span> je rovné <span class="math inline">\(x\)</span> bez jednej cifry. <span class="math inline">\(x\)</span> má byť aspoň dvojciferné a nesmie začínať cifrou <span class="math inline">\(0\)</span>, zatiaľčo <span class="math inline">\(y\)</span> má mať práve o jednu cifru menej a môže začínať cifrou <span class="math inline">\(0\)</span>. Vypíšte iba unikátne dvojice v lexikograficky usporiadanom poradí (teda tie s menším <span class="math inline">\(x\)</span> skôr).</p>
+<p>Bude 8 sád, v <span class="math inline">\(i\)</span>-tej sade plati <span class="math inline">\(10^i \leq N &lt; 10^{i+1}\)</span>.</p>
+<h3 id="príklady">Príklady</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>3
+47
+102
+21</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>1
+43 + 4
+3
+93 + 9
+96 + 6
+101 + 01
+0</code></pre>

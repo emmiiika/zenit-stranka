@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block main %}
+<div id="contacts">
+    <div id="otherContants">
+        <div class="contact">
+            <a href="https://www.facebook.com/slovakiaskills"><img src="../static/icons/facebook_white.png">Facebook</a>
+        </div>
+        <div class="contact">
+            <a href="https://siov.sk/sutaze/zenit/"><img src="../static/icons/facebook_white.png">ŠIOV</a>
+        </div>
+        <div class="contact">
+            <a href="https://dvaluch.web.cern.ch/zenit/index.html"><img src="../static/icons/microchip_white.png">Elektronika</a>
+        </div>
+        <div class="contact">
+            <a href="https://zenit.svsbb.sk/#"><img src="../static/icons/settings_white.png">Strojárstvo</a>
+        </div>
+        <div class="contact">
+            <a href="https://zenit.svsbb.sk/webdeveloper"><img src="../static/icons/globe_white.png">Web developer</a>
+        </div>
+        <div class="contact">
+            <a href="https://zenit.svsbb.sk/grafik"><img src="../static/icons/graphic-tool_white.png">Grafik</a>
+        </div>
+    </div>
+    <div id="mailForm">
+        <h1>Máš otázku? Sem s ňou!</h1>
+        <p>V prípade, že máš nejakú <span class="highlight">otázku</span>, tu nám ju môžeš <span class="highlight">napísať</span>
+            na <a href="mailto:zenit@ksp.sk"><span class="highlight">zenit@ksp.sk</span></a> alebo rovno sem.
+            Otázky typu <span class="italic">"Prečo mám na treťom vstupe WA?"</span>
+            alebo <span class="italic">"Čo znamená TLE?"</span> <span class="highlight">sem nepatria</span>. V prvom
+            prípade je odpoveď jednoduchá: "Lebo tvoj
+            program nerieši úlohu správne." a druhá otázka
+            len naznačuje že si nečítal/-a sekciu FAQ.
+        </p>
+        <form id="mailFormInput">
+            <input type="text" id="subject" placeholder="Predmet">
+            <textarea id="message" placeholder="Text správy"></textarea>
+            <input type="submit" value="Odoslať">
+        </form>
+    </div>
+</div>
+{% endblock %}

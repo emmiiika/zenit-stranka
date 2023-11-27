@@ -1,0 +1,27 @@
+<h2 id="Nadpis">Fakt veľa mostov</h2>
+<p><em>Počet bodov: 45</em></p>
+<p>Po poklese cien stavebných materiálov KMS (Komisia Mostového Stavania) rozhodla, že sa budú stavať mosty. Fakt veľa mostov.</p>
+<p>Navrhli <span class="math inline">\(N\)</span> mostov, ktoré môžu postaviť cez miestny potok. Potok tečie zľava doprava a na jeho hornom aj dolnom brehu je <span class="math inline">\(N\)</span> križovatiek. Každý most je určený tým, ktoré dve križovatky (jednu na dolnom a jednu na hornom brehu) spája. Každá križovatka je vhodná na spojenie s práve jednou križovatkou na opačnom brehu.</p>
+<p>Problém však nastáva, keď sa mosty majú križovať - teda ak by sa mal postaviť most medzi križovatkami <span class="math inline">\(a\)</span> a <span class="math inline">\(b\)</span>, a zároveň <span class="math inline">\(x\)</span> a <span class="math inline">\(y\)</span>, pričom <span class="math inline">\(a &lt; b\)</span> a zároveň <span class="math inline">\(x &gt; y\)</span>. Napríklad most medzi <span class="math inline">\(3\)</span> a <span class="math inline">\(8\)</span> by sa križoval s mostom medzi <span class="math inline">\(4\)</span> a <span class="math inline">\(5\)</span>.</p>
+<p>KMS si za návrhmi pevne stojí. Zistite, koľko najviac mostov vedia postaviť, aby sa žiadne z nich nekrižovali.</p>
+<h3 id="vstup-a-výstup">Vstup a výstup</h3>
+<p>V prvom riadku je číslo <span class="math inline">\(N\)</span> - počet návrhov na mosty, ako aj počet križovatiek na hornom a dolnom brehu potoka.</p>
+<p>V každom z ďalších <span class="math inline">\(N\)</span> riadkov sú dve čísla <span class="math inline">\(a\)</span> a <span class="math inline">\(b\)</span> - návrh na postavenie mosta medzi križovatkou <span class="math inline">\(a\)</span> na dolnom brehu a križovatkou <span class="math inline">\(b\)</span> na hornom brehu. Križovatky sú očíslované od <span class="math inline">\(1\)</span> po <span class="math inline">\(N\)</span> zľava doprava. Každé číslo od <span class="math inline">\(1\)</span> po <span class="math inline">\(N\)</span> sa objaví práve raz ako <span class="math inline">\(a\)</span> a práve raz ako <span class="math inline">\(b\)</span>.</p>
+<p>Vypíšte jedno číslo - najväčší počet mostov, ktoré sa dajú naraz postaviť bez toho, aby sa križovali.</p>
+<p>V prvej sade platí <span class="math inline">\(1 \leq N \leq 10\)</span>.</p>
+<p>V druhej sade platí <span class="math inline">\(1 \leq N \leq 1\,000\)</span>.</p>
+<h3 id="príklady">Príklady</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>9
+1 1
+3 2
+2 3
+4 9
+5 6
+7 8
+6 7
+8 5
+9 4</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>5</code></pre>
+<p><em>Vieme postaviť napríklad prvý, druhý, piaty, šiesty a siedmy most. Nedá sa postaviť šesť mostov bez toho, aby sa niektoré križovali.</em></p>

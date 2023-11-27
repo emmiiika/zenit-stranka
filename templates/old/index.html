@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Zenit</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <link rel="icon" type="image/x-icon" href="/static/favicon/favicon.ico">
+    <script src="/static/helpers.js"></script>
+</head>
+<body onload="includeHTML(); countdown()">
+<header>
+    <div id="headBar">
+        <a href="index.html"><img id="logo" alt="logo" src="/static/logo/l.png"></a>
+        <div id="user">
+            <button id="signIn" onclick="on()">Prihlásiť sa</button>
+        </div>
+    </div>
+    <nav>
+        <a href="{{ url_for('index') }}" class="selected">Domov</a>
+        <p> | </p>
+        <a href="{{ url_for('tasks') }}">Ulohy</a>
+        <p> | </p>
+        <a href="{{ url_for('submits') }}">Submity</a>
+        <p> | </p>
+        <a href="{{ url_for('results') }}">Vysledky</a>
+        <p> | </p>
+        <a href="{{ url_for('faq') }}">FAQ</a>
+        <p> | </p>
+        <a href="{{ url_for('contact') }}">Kontakt</a>
+    </nav>
+
+</header>
+
+<main id="main">
+    <div id="loginForm" include-html="/static/login.html"></div>
+    <div id="updates">
+        <div id="notification">
+            <div id="notificationHeader">
+                <h1>AKTUÁLNE INFORMÁCIE</h1>
+            </div>
+            <div id="notificationCenter">
+                <div id="alertBoxes">
+                    <div class="success alertBox">
+                        <div class="alertBoxText">
+                            <img src="/static/icons/checked.png">
+                            <p>Si super <3!</p>
+                        </div>
+                        <div class="successTs ts">
+                            <p>11:23:34 11.10.2023</p>
+                        </div>
+                    </div>
+                   <div class="info alertBox">
+                        <div class="alertBoxText">
+                            <img src="/static/icons/information.png">
+                            <p>Momentálne nemáme žiadne oznamy :)</p>
+                        </div>
+                       <div class="infoTs ts">
+                            <p>11:23:34 11.10.2023</p>
+                        </div>
+                    </div>
+                    <div class="warning alertBox">
+                        <div class="alertBoxText">
+                            <img src="/static/icons/danger.png">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <div class="warningTs ts">
+                            <p>11:23:34 11.10.2023</p>
+                        </div>
+                    </div>
+                    <div class="error alertBox">
+                        <div class="alertBoxText">
+                            <img src="/static/icons/x-mark.png">
+                            <p>Zle!</p>
+                        </div>
+                        <div class="errorTs ts">
+                            <p>11:23:34 11.10.2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="importantDates">
+            <h1>DÔLEŽITÉ DÁTUMY:</h1>
+            <div id="dates">
+                <ul>
+                    <li class="dateType">Do najbližšieho kola zostáva:</li>
+                    <li id="timeCountdown" class="date">00:00:00</li>
+                    <li id="dateCountdown" class="date">0 dni</li>
+                    <li class="dateType">Školské kolo:</li>
+                    <li class="date">17.10.2023</li>
+                    <li class="dateType">Krajské kolo:</li>
+                    <li class="date">23.11.2024</li>
+                    <li class="dateType">Celoštátne kolo:</li>
+                    <li class="date">19. - 21.03.2024</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!--        <div class="parallax"></div>-->
+    <div id="about">
+        <div id="aboutBorder">
+            <h1>O SÚŤAŽI</h1>
+            <p>
+                Zenit v programovaní je 4-hodinová súťaž, v ktorej riešitelia programujú riešenia (zvyčajne)
+                desiatich úloh. Pri ich riešení si precvičujú logické myslenie, programovacie schopnosti,
+                ale aj "obyčajné" čítanie s porozumením.
+                <br>
+                <br>
+                Súťaží sa v dvoch kategóriach - A a B. Kategória A je určená pre študentov maturitných
+                a predmaturitných ročníkov. Kategória B pre mladších.
+                <br>
+                <br>
+                Súťaž pozostáva z troch kôl. Prvé je školské kolo, ktorého sa môže zúčastniť hocikto. Nasleduje
+                krajské kolo, do ktorého postupujú najlepší riešitelia z každej školy z celého kraja (v závislosti
+                od kapacít kraja sa môže počet líšiť). Posledné kolo je celoštátne a tam postupuje nejlepší riešiteľ
+                z kategórie A a najlepší riešiteľ z kategórie B za každý kraj.
+                <br>
+                <br>
+                Ak sa chceš tiež zapojiť, <a href="">zaregistruj</a> sa a počas súťaže vyrieš čo najviac úloh. Stačí naprogramovať
+                riešenie danej úlohy a odovzdať ho na stránke. Následné ti automatický testovač toto riešenie
+                otestuje a ohodnotí. Nič zložité :).
+            </p>
+        </div>
+    </div>
+<!--        <div class="parallax"></div>-->
+</main>
+<footer>
+    <p>Working on it - Emmika 2023</p>
+</footer>
+</body>
+</html>

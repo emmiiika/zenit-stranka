@@ -1,0 +1,32 @@
+<h2 id="Nadpis">Komplikovaná rekonštrukcia permutácie</h2>
+<p><em>Počet bodov: 70</em></p>
+<p>Daná je postupnosť <span class="math inline">\(a_1,a_2,\dots\)</span> celých čísel, inverzia je dvojica indexov <span class="math inline">\(i,j\)</span> taká, že <span class="math inline">\(i&lt;j\)</span> ale <span class="math inline">\(a_i &gt; a_j\)</span>.</p>
+<p>Permutácia rádu <span class="math inline">\(n\)</span> je postupnosť <span class="math inline">\(p_1,\dots,p_n\)</span> ktorá obsahuje každé číslo medzi 1 a <span class="math inline">\(n\)</span> práve raz.</p>
+<p>Daná je permutácia <span class="math inline">\(p\)</span> a kladné celé číslo <span class="math inline">\(k\)</span>, definujeme novú postupnosť <span class="math inline">\(q_1,\dots,q_{n-k+1}\)</span> nasledovne: pre každé <span class="math inline">\(i\)</span>, nech <span class="math inline">\(q_i\)</span> je počet inverzií v postupnosťi <span class="math inline">\(p_i,p_{i+1},\dots,p_{i+k-1}\)</span>.</p>
+<p>Na príklad, nech <span class="math inline">\(p=(3,1,2,5,4)\)</span> a <span class="math inline">\(k=3\)</span>. Potom:</p>
+<ul>
+<li><span class="math inline">\(q_1 = {\rm inverzie}(3,1,2) = 2\)</span></li>
+<li><span class="math inline">\(q_2 = {\rm inverzie}(1,2,5) = 0\)</span></li>
+<li><span class="math inline">\(q_3 = {\rm inverzie}(2,5,4) = 1\)</span></li>
+</ul>
+<h3 id="úloha">Úloha</h3>
+<p>Na vstupe sú hodnoty <span class="math inline">\(n\)</span>, <span class="math inline">\(k\)</span>, postupnosť <span class="math inline">\(q\)</span>, so zárukou, že pre dané dáta existuje aspoň jedna permutácia <span class="math inline">\(p\)</span> z ktorej vznikne postupnosť <span class="math inline">\(q\)</span>. Zrekonštruujte ľubovolnú takú permutáciu.</p>
+<h3 id="vstup-a-výstup">Vstup a výstup</h3>
+<p>Prvý riadok obsahuje čísla <span class="math inline">\(n\)</span> a <span class="math inline">\(k\)</span>.</p>
+<p>Na druhom riadku sú hodnoty <span class="math inline">\(q_1, \dots, q_{n-k+1}\)</span>.</p>
+<p>Vypíšte jeden riadok s <span class="math inline">\(n\)</span> medzerou oddeleními číslami: permutáciou <span class="math inline">\(p\)</span>.</p>
+<h3 id="obmedzenia">Obmedzenia</h3>
+<p>Podúloha 1 (5 bodov):<span class="math inline">\(2\leq n\leq 5\)</span>,<span class="math inline">\(k=2\)</span>.</p>
+<p>Podúloha 2 (10 bodov):<span class="math inline">\(2\leq n\leq 5\)</span>,<span class="math inline">\(2\leq k\leq n\)</span>.</p>
+<p>Podúloha 3 (10 bodov):<span class="math inline">\(2\leq n\leq 1000\)</span>,<span class="math inline">\(k=2\)</span>.</p>
+<p>Podúloha 4 (30 bodov):<span class="math inline">\(5\leq n\leq 1000\)</span>,<span class="math inline">\(2\leq k\leq 6\)</span>.</p>
+<p>Podúloha 5 (10 bodov):<span class="math inline">\(2\leq n\leq 100\,000\)</span>,<span class="math inline">\(k=2\)</span>.</p>
+<p>Podúloha 6 (30 bodov):<span class="math inline">\(2\leq n\leq 100\,000\)</span>,<span class="math inline">\(2\leq k\leq 6\)</span>.</p>
+<p>Podúloha 7 (5 bodov):<span class="math inline">\(2\leq n\leq 200\,000\)</span>,<span class="math inline">\(2\leq k\leq 9\)</span>.</p>
+<h3 id="príklad">Príklad</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>5 3
+2 0 1</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>3 1 2 5 4</code></pre>
+<p><em>Toto je príklad ukázaný v zadaní.</em></p>

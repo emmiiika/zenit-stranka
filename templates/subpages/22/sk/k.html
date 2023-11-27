@@ -1,0 +1,32 @@
+<h2 id="Nadpis">Jeden zásadný rozdiel</h2>
+<p><em>Počet bodov: 60</em></p>
+<p>Pred pár týždňami sa dokončil v štátnej správe projekt za trinásťcifernú sumu (v mikrocentoch).</p>
+<p>Bol to program, ktorý dostal na vstupe matematický výraz v tzv. postfixovej notácii a vyrátal jeho výsledok.</p>
+<p>Postfixová notácia funguje tak, že namiesto toho, aby sme operátory písali medzi operandami, píšeme ich za nimi. Napríklad <code>(x+y)*z</code> zapíšeme ako <code>xy+z*</code>.</p>
+<p>V takejto notácii sa výraz ľahko vyhodnocuje programom. Stačí začať s prázdnym zásobníkom a čítať výraz zľava doprava. Keď prečítame operand, pridáme ho na vrch zásobníka. Keď prečítame nejaký operátor <code>O</code>, zoberieme dve vrchné hodnoty zo zásobníka, aplikujeme na ne operátor a výsledok vrátime do zásobníka. V pseudokóde by to teda vyzeralo takto:</p>
+<pre><code>a = zasobnik.pop()
+b = zasobnik.pop()
+zasobnik.push(b O a)</code></pre>
+<p>Na konci procesu bude jediná hodnota v zásobníku výsledok celého výrazu. Môžete si overiť, že tento postup vyráta z výrazu <code>xy+z*</code> hodnotu <code>(x+y)*z</code>.</p>
+<p>V implementácii programu v štátnej správe je však jeden zásadný rozdiel. Použili namiesto zásobníka (stack) frontu (queue). Tá sa od zásobníka líši tým, že zatiaľ čo pri zásobníku pridávame aj odoberáme prvky z vrchu, pri fronte pridávame prvky na vrch, ale odoberáme ich zospodu. To značne zmení, ako vyhodnotíme daný výraz.</p>
+<p>Už je však neskoro, suma je vyplatená a program spustený. Ostáva jediné - napísať ďalší program, ktorý bude prepisovať výrazy z postfixovej notácie na takú, ktorú náš program vyhodnotí rovnako, ako by správny program so zásobníkom vyhodnotil originálnu.</p>
+<h3 id="vstup-a-výstup">Vstup a výstup</h3>
+<p>V prvom riadku vstupu je číslo <span class="math inline">\(T\)</span> - počet výrazov, ktoré máme prepísať.</p>
+<p>V každom z ďalších <span class="math inline">\(T\)</span> riadkov je jeden výraz. Malé písmenká anglickej abecedy reprezentujú operandy, a veľké písmená reprezentujú operátory.</p>
+<p>Vypíšte pre každý výraz <span class="math inline">\(A\)</span> taký výraz <span class="math inline">\(B\)</span>, že <span class="math inline">\(A\)</span> sa vyhodnotí postupom popísaným v úlohe so zásobníkom rovnako, ako sa vyhodnotí výraz <span class="math inline">\(B\)</span>, keď pri tom použijeme frontu. Aby bol výstup jednoznačný, budeme predpokladať že žiadny z operátorov nie je asociatívny ani komutatívny (<code>aXb != bXa</code>, <code>(aXb)Xc != aX(bXc)</code>).</p>
+<p>Platí <span class="math inline">\(1 \leq T \leq 100\)</span>.</p>
+<p>Výrazy budú korektné výrazy v postfixovej notácii, ich dĺžka nepresiahne <span class="math inline">\(50\,000\)</span> znakov a súčet ich dĺžok nepresiahne <span class="math inline">\(200\,000\)</span> znakov.</p>
+<p>V prvej sade platí, že dĺžka výrazu je najviac <span class="math inline">\(3\)</span> znaky.</p>
+<p>V druhej a tretej sade platí, že dĺžka výrazu je najviac <span class="math inline">\(100\)</span> znakov.</p>
+<p>V posledných troch sadách neplatia žiadne obmedzenia navyše.</p>
+<h3 id="príklad">Príklad</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>3
+xyPzX
+aaAaaAA
+abcDEfGhiJK</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>yxzPX
+aaaaAAA
+cbDaihfEJGK</code></pre>
+<p><em>V prvom výraze napushujeme do fronty y,x,z. Vyberieme z nej y a x, a pushneme (xPy). Vyberieme z, (xPy) a pushneme ((xPy)Xz). To je výraz, ktorý by vyhodnotil správny program pre xyPzX.</em></p>

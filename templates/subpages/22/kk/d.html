@@ -1,0 +1,30 @@
+<h2 id="Nadpis">Divoký západ</h2>
+<p><em>Počet bodov: 25</em></p>
+<p>Kovboji na divokom západe to mali ťažké. Každý kôň cválal inou rýchlosťou, no keď išli v stáde, prispôsobili sa a stádo išlo priemernou rýchlosťou jednotlivích koní. Kovboji jedného dňa zistili, že keď koníky podkujú, môže sa im rýchlosť zmeniť. Nie každému koníkovi sa však podkovi páčia. Každý kovboj si teda zapísal akou rýclosťou cvála jeho koník, akú rýchlosť má keď ho podkuje, a či je koník smutný keď ho podkuje.</p>
+<p>Kovboji by sa teraz potrebovali dostať do večera do susedného mesta a vyrátali si akú príemernú rýchlosť na to potrebujú mať.</p>
+<p>Vašou úlohou je zistiť, koľko najmenej koníkov musí byť smutných na to aby kovboji svoju cestu stihli.</p>
+<h3 id="vstup">Vstup</h3>
+<p>Na prvom riadku sú dve celé čísla <span class="math inline">\(1 \leq N \leq 100~000\)</span> - počet kovbojov a <span class="math inline">\(1 \leq X \leq 100\)</span> - priemerná rýchlosť ktorú chcú kovboji dosiahnuť. Na ďaľších <span class="math inline">\(N\)</span> riadkoch sú medzerou oddelené rýchlosť koníka bez podkov, rýchlosť koníka s podkovammi a slovo “ano” alebo “nie” podla toho či je koník smutný keď má podkovy.</p>
+<p>Každá rýchlosť je celé číslo medzi <span class="math inline">\(1\)</span> a <span class="math inline">\(100\)</span>.</p>
+<p>V piatich sadách je <span class="math inline">\(N\)</span> postupne do <span class="math inline">\(10\)</span>, <span class="math inline">\(100\)</span>, <span class="math inline">\(1000\)</span>, <span class="math inline">\(10000\)</span>, <span class="math inline">\(100000\)</span>.</p>
+<h3 id="výstup">Výstup</h3>
+<p>Na výstup vypíšte “neda sa” ak to kovboji za žiadnych okolností nestihnú, inak vypíšte jedno číslo - najmenší možný počet smutných koníkov, aby kovboji stihli cestu.</p>
+<h3 id="príklad">Príklad</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>3 12
+5 10 ano
+10 4 nie
+3 7 nie</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>neda sa</code></pre>
+<p><em>Žiadny koník nevie ísť rýchlejšie ako 10, teda priemernú rýchllosť 12 nedosiahnu.</em></p>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>5 9
+7 10 nie
+8 2 ano
+10 12 ano
+3 8 ano
+11 10 nie</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>1</code></pre>
+<p><em>Bez podkov je priemerná rýchlosť <span class="math inline">\(7.8\)</span>. Ak podkujeme prvého a štvrtého koníka, priemerná rýchlosť bude <span class="math inline">\(9.4\)</span> pričom smutný bude len ten štvrtý koník.</em></p>

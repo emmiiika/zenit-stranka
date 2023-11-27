@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Zenit</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <script src="static/helpers.js"></script>
+</head>
+<body id="body" onload="includeHTML()">
+<header>
+    <div id="headBar">
+        <a href="index.html"><img id="logo" alt="logo" src="/static/logo/l.png"></a>
+        <div id="user">
+            <button id="signIn" onclick="on()">Prihlásiť sa</button>
+        </div>
+    </div>
+</header>
+<nav>
+    <a href="index.html" >Domov</a>
+    <p> | </p>
+    <a href="tasks.html" class="selected">Ulohy</a>
+    <p> | </p>
+    <a href="submits.html">Submity</a>
+    <p> | </p>
+    <a href="results.html">Vysledky</a>
+    <p> | </p>
+    <a href="faq.html">FAQ</a>
+    <p> | </p>
+    <a href="contact.html">Kontakt</a>
+</nav>
+<main>
+    <div id="loginForm" include-html="login.html"></div>
+    <div id="taskDisplay">
+        <div id="tasks">
+            <form id="roundType" method="POST" action="">
+                <label>Vyber kolo: </label>
+                <div class="select">
+                    <select>
+                         <option value="sk" selected="selected">školské</option>
+                         <option value="kk">krajské</option>
+                         <option value="ck">celoštátne</option>
+                    </select>
+                </div>
+                <div class="select">
+                    <select>
+                        <option value="23" selected="selected">2023</option>
+                        <option value="22">2022</option>
+                        <option value="21">2021</option>
+                    </select>
+                </div>
+                <input type="submit" value="zobraziť">
+            </form>
+            <div id="taskList">
+                <label>Úlohy:</label>
+                <a href="#" onclick=displayTask("/static/subpages/prikl1.html")>Úloha A</a>
+                <a href="#" onclick=displayTask("/static/subpages/prikl2.html")>Úloha B</a>
+                <a href="#" onclick=displayTask("/static/subpages/prikl3.html")>Úloha C</a>
+                <a href="#" onclick=displayTask("/static/subpages/prikl4.html")>Úloha D</a>
+                <a href="#" onclick=displayTask("/static/subpages/prikl5.html")>Úloha E</a>
+                <a href="#" onclick=displayTask("/static/subpages/prikl6.html")>Úloha F</a>
+                <a href="#" onclick=displayTask("/static/subpages/prikl7.html")>Úloha G</a>
+                <a href="#" onclick=displayTask("/static/subpages/prikl8.html")>Úloha H</a>
+                <a href="#" onclick=displayTask("/static/subpages/prikl9.html")>Úloha I</a>
+                <a href="#" onclick=displayTask("/static/subpages/prikl10.html")>Úloha J</a>
+            </div>
+        </div>
+        <div id="taskText" include-html="/static/subpages/prikl1.html"></div>
+        <div id="submitTask">
+            <form id="chooseFile" action="">
+                <label>Odovzdať úlohu: </label>
+                <input type="file" name="filename" id="fileInput" onchange="handleFileSelect()">
+                <input type="submit">
+            </form>
+
+            <div id="displayFile" include-html="">
+
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>Working on it - Emmika 2023</p>
+</footer>
+</body>
+</html>

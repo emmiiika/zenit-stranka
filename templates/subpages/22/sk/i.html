@@ -1,0 +1,55 @@
+<h2 id="Nadpis">Iná Oceánska Idylka</h2>
+<p><em>Počet bodov: 55</em></p>
+<p>Alicka, Ela a Eliška sa vybrali do Turecka na Inú Oceán… ou nie, na Exkluzívnu Grécku Oceánsku Idylku. Počas voľného programu, keď sedeli na pláži s počítačmi a testovali ZENIT, vymysleli namiesto toho novú krypto stabilnú mincu <em>Zenitoken</em>. Na rozdiel od ostatných stabilných mincí, ktoré si stabilne držia hodnotu v porovnaní s dolárom, ich minca v porovnaní s dolárom každý deň stabilne stúpa alebo klesá.</p>
+<p>Na začiatku má Zenitoken hodnotu <span class="math inline">\(0\)</span> dolárov. Následne každý deň jeho hodnota stúpne alebo klesne práve o <span class="math inline">\(1\)</span>. Zenitoken je až taký revolučný, že nemá problémy ísť aj do záporných hodnôt.</p>
+<p>Keďže dovolenka ich stála nemalé peniaze, chceli by si našporiť, dokonca zarobiť niekoľko peňazí. Ako vlastníčky Zenitokenu, každý deň získajú profit úmerný jeho hodnote. Získanie peňazí teda nie je vôbec taký problém ako je si ich neminúť. Alicka, Ela a Eliška chcú pred ostatými hosťami nejako vyzerať a preto potrebujú mať na spoločnom konte za určité obdobia veľmi špecifické hodnoty - vyhnú sa tak nepríjemným škandálom medzi tunajšou smotánkou.</p>
+<p>Poradťe dievčatám, ako manipulovať trhom, aby to nemuseli kalkulovať ony a mohli si spokojne užívať.</p>
+<h3 id="vstup-a-výstup">Vstup a výstup</h3>
+<p>Na prvom riadku vstupu dostanete počet období <span class="math inline">\(D\)</span>, ktoré potrebujú kalkulovať. Nasleduje <span class="math inline">\(D\)</span> riadkov, na <span class="math inline">\(i\)</span>-tom z nich nich dve čísla <span class="math inline">\(1 \leq A_i \leq 10^5\)</span> a <span class="math inline">\(0 \leq |N_i| \leq 10^{18}\)</span>, počet dní v danom období a suma, ktorú majú za dané obdobie vykalkulovať.</p>
+<p>Na výstup vypíšte <span class="math inline">\(D\)</span> riadkov. Ak sa za dané obdobie dá vykalkulovať požadovaná suma, vypíšte na <span class="math inline">\(i\)</span>-ty riadok medzerami oddelených <span class="math inline">\(A_i\)</span> čísel udávajúcich hodnoty Zenitokenu v jednotlivé dni. Hodnota v prvý deň musí byť <span class="math inline">\(0\)</span>, súčet hodnôt musí byť <span class="math inline">\(N_i\)</span>, a susedné hodnoty sa musia líšiť presne o <span class="math inline">\(1\)</span>. Ak sa požadovaná hodnota za dané obdobie nedá vykalkulovať, vypíšte slovo “nene”.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Sada</th>
+<th style="text-align: right;"><span class="math inline">\(1-3\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(4-7\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(8-9\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(10-11\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(1 \leq D \leq\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(10^2\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(10^3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(10^4\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(10^5\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(1 \leq A_i \leq\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(10^1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(10^3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(10^4\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(10^5\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(1 \leq Sum A_i \leq\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(10^3\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(10^4\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(10^5\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(10^6\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>V sadách <span class="math inline">\(4, 5, 8, 10\)</span> je navyše <span class="math inline">\(|N_i| \leq 10^3\)</span>.</p>
+<h3 id="príklad">Príklad</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>2
+5 2
+7 3
+1 1</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>0 -1 0 1 2
+0 1 2 1 0 -1 0
+nene</code></pre>
+<p><em>V prvom období dievčatá dokážu vykalkulovať <span class="math inline">\(0+(-1)+0+1+2 = 2\)</span> doláre. V treťom období si nepomôžu, v prvý deň má Zenitoken hodnotu <span class="math inline">\(0\)</span></em></p>

@@ -1,0 +1,30 @@
+<h2 id="Nadpis">Július Cézar</h2>
+<p><em>Počet bodov: 60</em></p>
+<p>Július Cézar na svojich vojenských výpravách rád staval palisády. Typicky by mali mať všetky kmene tvoriace palisádu rovnakú výšku, pri dobýjaní jednej nemenovanej Gálskej dediny chcel však skúsiť inú stratégiu - mať rôzne výšky kmeňov, a usporiadať ich od najnižšej po najvyššiu. Aby to bolo estetické, <span class="math inline">\(i\)</span>-ty kmeň by pritom mal byť aspoň <span class="math inline">\(i\)</span> vymysľometrov vysoký.</p>
+<p>Problém nastal v tom, že kmene sa opotrebúvajú, a tak ich raz za čas bolo treba vymeniť za iné…</p>
+<h3 id="úloha">Úloha</h3>
+<p>Máme <span class="math inline">\(n\)</span> čísel - výšky kmeňov vo vymysľometroch.</p>
+<p>Chceme vedieť, či po zoradení od najmenšieho po najväčšie platí, že <span class="math inline">\(i\)</span>-ty najnižší kmeň má aspoň <span class="math inline">\(i\)</span> metrov.</p>
+<p>Navyše budeme musieť <span class="math inline">\(q\)</span> krát vymeniť nejaký kmeň za iný, a túto otázku si budeme klásť zakaždým. Tieto zmeny pretrvávajú (zahodené kmene nevraciame).</p>
+<h3 id="vstup-a-výstup">Vstup a Výstup</h3>
+<p>V prvom riadku je číslo <span class="math inline">\(n\)</span> - počet kmeňov v palisáde.</p>
+<p>V druhom riadku je <span class="math inline">\(n\)</span> oddelených celých čísel <span class="math inline">\(1 \leq v_i \leq n\)</span> - výšky kmeňov.</p>
+<p>V treťom riadku je číslo <span class="math inline">\(q\)</span> - počet výmen, ktoré spravíme.</p>
+<p>V každom z nasledujúcich <span class="math inline">\(q\)</span> riadkov sú dve čísla <span class="math inline">\(1 \leq k,v \leq n\)</span> označujúce, že <span class="math inline">\(k\)</span>-ty kmeň (podľa poradia na vstupe) vymeníme za kmeň s výškou <span class="math inline">\(v\)</span>.</p>
+<p>Vypíšte <span class="math inline">\(q+1\)</span> riadkov, v každom <code>ANO</code> alebo <code>NIE</code> podľa toho, či sa dajú kmene zoradiť tak, aby <span class="math inline">\(i\)</span>-ty z nich mal aspoň <span class="math inline">\(i\)</span> vymysľometrov; v prvom riadku pre začiatočnú palisádu, v každom ďalšiom po aplikovaní patričnej výmeny.</p>
+<p>Sú štyri sady vstupov; v každej platí <span class="math inline">\(1 \leq n, q \leq 200\,000\)</span>.</p>
+<p>V prvej sade navyše platí <span class="math inline">\(n-v_i, n-v \leq 10\)</span>.</p>
+<h3 id="príklady">Príklady</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>5
+3 1 4 2 5
+3
+3 3
+4 4
+5 4</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>ANO
+NIE
+ANO
+NIE</code></pre>
+<p><em>Začiatočná palisáda je v pohode. Ak však kmeň s výškou <span class="math inline">\(4\)</span> zmenšíme, štvrý najnižší kmeň bude nižší ako <span class="math inline">\(4\)</span>, čo je zle. Keď potom získame kmeň výšky <span class="math inline">\(4\)</span> namiesto <span class="math inline">\(2\)</span>, opäť je všetko v poriadku. Vymenením jediného kmeňu výšky <span class="math inline">\(5\)</span> si to vzápätí pokazíme.</em></p>

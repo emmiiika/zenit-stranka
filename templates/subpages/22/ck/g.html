@@ -1,0 +1,32 @@
+<h2 id="Nadpis">Gól práve strelil…</h2>
+<p><em>Počet bodov: 45</em></p>
+<p>Slovakistan žije futbalom! Má dve populárne mužstvá - KSP (Kopeme Silno, Pezinok) a FKS (Futbaloví Králi, Senec).</p>
+<p>Nanešťastie po výstavbe nových športových hál, zavlažení trávnikov, a zainvestovaní do cibuliek tulipánov nezostalo klubom práve veľa peňazí na nakúpenie nových dresov.</p>
+<p>Rozhodli sa, že dresy teda nakúpia spolu. Problém s tým že jeden dres budú nosiť dvaja futbalisti je však ten, že na drese má byť okrem čísla napísaná (časť) futbalistovho mena. Presnejšie, futbalistov dres musí mať na sebe prefix jeho mena (možno úplný, možno prázdny).</p>
+<p>Na dresoch teda musia byť také mená, že si každý hráč KSP vie obliecť dres s vyhovujúcim nápisom, a následne si vie aj každý hráč FKS obliecť dres s vyhovujúcim nápisom.</p>
+<p>Samozrejme, mohli na každý dres vytlačiť len číslo a prázdny reťazec, ktorý je vyhovujúci prefix každého mena. Ale na to sa fanúšikom aj komentátorom horšie pozerá, lebo sa im hráči ťažšie rozlišujú.</p>
+<p>Pomôžte Slovakistanskému futbalu, a navrhnite takú sadu dresov, aby súčet dĺžok nápisov na nich bol čo najväčší.</p>
+<h3 id="úloha">Úloha</h3>
+<p>Oba tímy pozostávaju z <span class="math inline">\(N\)</span> hráčov. Každý hráč má meno - neprázdny reťazec veľkých písmen anglickej abecedy.</p>
+<p>Hráč si môže obliecť dres vtedy, ak je na ňom napísaný prefix jeho mena. Dĺžka nápisu je počet znakov v ňom.</p>
+<p>Zistite, aký najväčší súčet dĺžok nápisov môže byť na dresoch tak, aby si celé mužstvo KSP vedelo obliecť dresy, a neskôr celé mužstvo FKS tiež.</p>
+<h3 id="vstup-a-výstup">Vstup a Výstup</h3>
+<p>V prvom riadku je číslo <span class="math inline">\(N\)</span> - počet hráčov v oboch mužstvách.</p>
+<p>V druhom riadku je <span class="math inline">\(N\)</span> neprázdnych reťazcov veľkých písmen anglickej abecedy - mená hráčov KSP. V treťom riadku sú v rovnakom formáte mená hráčov FKS.</p>
+<p>Vypíšte jedno číslo - najväčší súčet dĺžok nápisov na dresoch, aby si ich vedeli obliecť obe mužstvá.</p>
+<p>V prvej sade <span class="math inline">\(N \leq 50\)</span> a dĺžky mien sú do <span class="math inline">\(50\)</span>. V druhej sade <span class="math inline">\(N \leq 200\)</span> a dĺžky mien sú do <span class="math inline">\(500\)</span>. V tretej <span class="math inline">\(N \leq 10^5\)</span>, súčet dĺžok všetkých mien na vstupe nepresiahne <span class="math inline">\(600\,000\)</span>, a žiadne meno nebude mať viac ako <span class="math inline">\(100\)</span> znakov.</p>
+<h3 id="príklady">Príklady</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>3
+KOVAC BOROVICA DOBEHOL
+DOHRAL KOVACIC LEMUR</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>7</code></pre>
+<p><em>Môžeme vyrobiť dresy s nápismi “KOVAC”, “DO”, "" (prázdny reťazec). Z tímu KSP si KOVAC oblečie dres “KOVAC”, BOROVICA "“, a DOBEHOL ”DO“. FKSáci zas vedia priradiť DOHRALovi ”DO“, KOVACICovi ”KOVAC“, a LEMURovi ”". Dokopy majú nápisy 7 znakov, a lepšie to nejde.</em></p>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>2
+ABRAKA ABKRABA
+ABRYBU ABKRAVU</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>8</code></pre>
+<p><em>“ABR” a “ABKRA”</em></p>

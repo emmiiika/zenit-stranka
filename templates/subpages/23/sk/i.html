@@ -1,0 +1,77 @@
+<h2 id="Nadpis">Identifikácia identifikátoru</h2>
+<p><em>Počet bodov: 80</em></p>
+<p>Ale však toto nie je normálne! Čo tým myslia že to neuspelo?! Je to pokazené? Som ja neschopný alebo oni hlúpi? Nakódil by som lepší softvér za dvadsať minút na školskom počítači!!!</p>
+<p>Rozhorčujete sa po tom čo ste už hádam stí krát priložili prst na ten naničhodný čítač odtlačkov prstov. Snažíte sa pridať si prst, ale ono to proste nejde! A keď ste to už takto prehlásili, tak ten lepší softvér jednoducho budete musieť naprogramovať.</p>
+<h3 id="úloha">Úloha</h3>
+<p>Váš odtlačok prsta vieme reprezentovať ako mriežku, kde na každom políčku buď je alebo nie je hrbolček.</p>
+<p>Na vstupe dostanete snímky prsta, ako ich naskenoval čítač odtlačkov prstov. Snímka je tiež reprezentovaná ako mriežka rovnakých rozmerov, kde o každom políčku vieme buď že:</p>
+<ol type="1">
+<li>na ňom bol hrbolček odtlačku prsta</li>
+<li>na ňom nebol hrbolček odtlačku prsta</li>
+<li>v tejto snímke o ňom nič nevieme</li>
+</ol>
+<p>Pri skenovaní ste však prstom hýbali, a teda každá snímka môže byť posunutá o nejaký neznámy (celočíselný) počet stĺpcov. V tom prípade snímač na stĺpcoch, ktoré sa neprekrývali s prstom, určite nezaznamenal žiadne hrbolčeky.</p>
+<p>Snímač navyše sníma iba ak vidí aspoň jeden hrbolček, a teda každá snímka ho bude obsahovať aspoň jeden (napríklad snímka plná políčok 3. typu nebude na vstupe).</p>
+<p>Vy samozrejme svoj odtlačok prsta nepoznáte. Ste posadnutý zistením, či ste vy neschopní, softvér hlúpy alebo snímač pokazený:</p>
+<ol type="1">
+<li>Ak existuje poposúvanie prsta, ktoré je konzistentné so všetkými snímkami a toto poposúvanie určuje práve jeden výzor prsta, tak je softvér hlúpy.</li>
+<li>Ak existuje poposúvanie prsta, ktoré je konzistentné so všetkými snímkami, ale žiadne poposúvanie nevie jednoznačne určit, ako vyzerá prst, tak ste vy neschopní.</li>
+<li>Ak neexistuje poposúvanie prsta, ktoré je konzistentné so všetkými snímkami, tak je snímač pokazený.</li>
+</ol>
+<p>Odporúčame vám si tieto pravidlá prečítať ešte raz. Zdôrazneniavhodné je napríklad to, že softvér môže byť hlúpy aj ak existuje niekoľko rôznych odtlačkov prsta, z ktorých mohli vzniknúť naše snímky.</p>
+<h3 id="vstup-a-výstup">Vstup a Výstup</h3>
+<p>Na prvom riadku vstupu budú tri čísla <span class="math inline">\(n_x\)</span>, <span class="math inline">\(n_y\)</span> a <span class="math inline">\(k\)</span> (<span class="math inline">\(1 \leq n_x, n_y, k \leq 10\)</span>) udávajúce počet stĺpcov, riadkov a snímkov. Snímky budú na vstupe vedľa seba oddelené medzerami. Nasleduje <span class="math inline">\(n_y\)</span> riadkov, každý obsahuje <span class="math inline">\(k\cdot(n_x+1)\)</span> znakov (vrátane znaku <code>'\n'</code>). Snímky obsahujú iba znaky <code>#?.</code>, kde <code>#</code> je hrbolček, <code>.</code> je nehrbolček a <code>?</code> je neistota.</p>
+<p>Na výstup vypíšte jeden riadok obsahujúci jedno slovo <code>hlupy</code>, <code>neschopny</code> alebo <code>pokazeny</code> podľa toho či je softvér hlúpy, vy neschopní alebo snímač pokazený.</p>
+<h3 id="príklady">Príklady</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>3 3 1
+..#
+.##
+###</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>hlupy</code></pre>
+<p><em>Snímač perfektne zachytil snímku odtlačku prsta.</em></p>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>3 3 3
+..# ..? .#.
+.## ..# ##?
+### .## ##.</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>hlupy</code></pre>
+<p><em>Odtlačok prsta vyzerá rovnako ako prvá snímka.</em></p>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>3 3 3
+#.# .#. ?#?
+.#. #.. .??
+... ... ???</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>hlupy</code></pre>
+<p><em>Odtlačok prsta vyzerá rovnako ako prvá snímka.</em></p>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>3 3 3
+#.# .#. .#.
+?#. #.. .?#
+... ... ...</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>neschopny</code></pre>
+<p><em>Nie je možné určiť ako vyzeral váš odtlačok prsta.</em></p>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>3 3 3
+#.# .#. ???
+.#. #.. ???
+... ... ?#?</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>pokazeny</code></pre>
+<p><em>Prvá a tretia snímka si protirečia.</em></p>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>2 1 1
+.#</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>hlupy</code></pre>
+<p><em>Ak sme prst nasnímali naozaj celý (neposunuli sme ho), tak ho máme celý jednoznačne určený.</em></p>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>2 1 2
+.# ##</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>hlupy</code></pre>
+<p><em>V druhom snímku bol prst neposunutý, v prvom posunutý o stĺpec doľava.</em></p>

@@ -1,0 +1,38 @@
+<h2 id="Nadpis">Celková výsledkovka</h2>
+<p><em>Počet bodov: 20</em></p>
+<p>Voľakedy dávno, keď súťaž ZENIT začínala, sa všetky programy vyhodnocovali manuálne. Po konci súťaže sa všetky stiahli na jednu disketu a opravovatelia prechádzali riešiteľa po riešiteľovi, úlohu po úlohe a jednotlivo ich testovali a bodovali. Pre každého riešiteľa si body písali na papier. Na záver však bolo treba zostaviť výsledkovku. A po celom dni testovania a bodovania, sa im zoraďovať tie kúsky papiera už fakt nechce…</p>
+<h3 id="vstup">Vstup</h3>
+<p>Na prvom riadku je jedno celé číslo <span class="math inline">\(0 \leq N \leq 100~000\)</span> - počet súťažiacich. Na ďaľších <span class="math inline">\(N\)</span> riadkoch sú mená a počty bodov jednotlivých súťažiacich, oddelené medzerou. Mená sú reťazce zložené z písmen anglickej abecedy (prvé veľké, zvyšné malé) s dĺžkou 1 až 20 znakov. Sú navzájom rôzne. Počet bodov je v rozsahu od <span class="math inline">\(0\)</span> do <span class="math inline">\(1~000~000~000\)</span>.</p>
+<p>V prvej sade je <span class="math inline">\(N\)</span> do tisíc. V druhej sade majú všetci účastníci rôzny počet bodov.</p>
+<h3 id="výstup">Výstup</h3>
+<p>Na výstup vypíšte <span class="math inline">\(N\)</span> riadkov obsahujúcich finálne poradie súťažiacich, od prvého miesta po posledné, vo formáte <code>poradie. Meno Body</code>. Poradie súťažiaceho je 1 plus počet súťažiacich, ktorí majú viac bodov ako on. Ak má viacero ľudí rovnaké poradie, vypíšte ich zoradeních abecedne.</p>
+<h3 id="príklad">Príklad</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>6
+David 2
+Peto 1
+Michal 0
+Janka 1
+Samko 5
+Jozef 2</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>1. Samko 5
+2. David 2
+2. Jozef 2
+4. Janka 1
+4. Peto 1
+6. Michal 0</code></pre>
+<p><em>Všimnite si, že Michal má 0 bodov a preto obsadil poslednú priečku. Keďže bolo pred ním 5 iných súťažiacich, je šiesty v poradí.</em></p>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>5
+Aron 2
+Aaron 2
+Aaronn 2
+Aaaron 2
+Baron 1</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>1. Aaaron 2
+1. Aaron 2
+1. Aaronn 2
+1. Aron 2
+5. Baron 1</code></pre>

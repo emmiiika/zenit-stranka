@@ -1,0 +1,27 @@
+<h2 id="Nadpis">Hra s nabíjacím traktorom</h2>
+<p><em>Počet bodov: 50</em></p>
+<p>Združenie Energeticky Nenáročných Inovatívnych Traktorov (ZENIT) prinieslo na trh elektrický traktor. Priniesli hračkársku verziu aj na Každoročné Stretnutie Poľnohospodárov (KSP). Tí ju potom darovali Korešpondečnému Semináru z Programovania, ktorí s ňou vymysleli sústredkovú hru. O tejto sústredkovej hre je táto úloha.</p>
+<p>Hra spočívala v tom, že na ceste bol položený hračkársky traktor na ručné nabíjanie. Postupne k nemu dobehli členovia tímu, zdvihli ho, v časovom limite pokrútili kľukou na nabíjanie a položili ho naspäť na cestu. Keď sa pri traktore vystriedali všetci z tímu, prišli vedúci, pustili traktor a odmerali, ako ďaleko hore kopcom vedel traktor prejsť.</p>
+<p>Ako prezieravý člen sústredka vieš o každom účastníkovi povedať, ako veľmi vie za pridelený čas nabiť traktor. Taktiež vieš predpovedať, či je daný účastník nešikovný. Nešikovní účastníci položia traktor na cestu otočený naopak (a traktor po spustení pôjde do opačného smeru, ako by šiel predtým, než ho daný účastník nabíjal).</p>
+<p>Vyber si z účastníkov <span class="math inline">\(K\)</span>-členný tím tak, aby váš traktor prešiel čo najďalej hore kopcom.</p>
+<h3 id="vstup-a-výstup">Vstup a výstup</h3>
+<p>V prvom riadku vstupu sú dve čísla <span class="math inline">\(N\)</span> a <span class="math inline">\(K\)</span> - počet účastníkov a počet ľudí v tíme.</p>
+<p>V druhom riadku je <span class="math inline">\(N\)</span> celých čísel <span class="math inline">\(u_i\)</span> popisujúcich účastníkov. Účastník <span class="math inline">\(i\)</span> nabije traktor tak, že prejde o <span class="math inline">\(|u_i|\)</span> milimetrov viac. Ak je <span class="math inline">\(u_i\)</span> záporné, účastník je nešikovný a traktor otočí.</p>
+<p>Traktor začína otočený smerom hore kopcom.</p>
+<p>Formálne, ak vyberieme účastníkov s hodnotami <span class="math inline">\(a_1, \cdots, a_K\)</span>, pričom <span class="math inline">\(M\)</span> z nich je záporných, traktor prejde <span class="math inline">\((|a_1|+\cdots+|a_k|) \cdot (-1)^M\)</span> milimetrov hore kopcom.</p>
+<p>Vypíšte najväčšie číslo <span class="math inline">\(v\)</span> také, že sa dá vybrať <span class="math inline">\(K\)</span> účastníkov, ktorí nabijú a otočia traktor tak, aby prešiel <span class="math inline">\(v\)</span> milimetrov hore kopcom.</p>
+<p>Vo vstupoch platí <span class="math inline">\(1 \leq K \leq N \leq 300\,000\)</span> a <span class="math inline">\(1 \leq |u_i| \leq 10^9\)</span>.</p>
+<p>Navyše, v prvej sade vstupov platí <span class="math inline">\(1 \leq N \leq 15\)</span>, v druhej <span class="math inline">\(K \leq 2\)</span>, a v tretej <span class="math inline">\(K \leq 5\)</span>. Vo zvyšných dvoch sadách neplatia obmedzenia navyše.</p>
+<h3 id="príklady">Príklady</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>5 3
+5 -1 -6 7 -9</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>22</code></pre>
+<p><em>Ak vyberieme posledných troch účastníkov, tí nabijú traktor tak, že prejde |-6|+|7|+|-9| = 22 milimetrov. Tretí a posledný účastník traktor otočia, takže ostane smerovať hore kopcom.</em></p>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>5 3
+5 -1 6 7 -9</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>18</code></pre>
+<p><em>Teraz je najlepšie zobrať do tímu prvého, tretieho a štvrtého účastníka. Najviac by nám traktor nabil piaty, ale ten je nešikovný a traktor by otočil dolu kopcom. Ak by sme zobrali aj druhého účastníka, traktor by skončil otočený hore kopcom, ale druhý účastník je slabý a neoplatí sa nám to.</em></p>

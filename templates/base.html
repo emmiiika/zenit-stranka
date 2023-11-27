@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Zenit</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <link rel="icon" type="image/x-icon" href="/static/favicon/favicon.ico">
+    <script src="/static/helpers.js"></script>
+    <script defer src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+</head>
+<body {% if request.path == url_for('index') %} onload="countdown()" {% endif %}>
+<header>
+    <div id="headBar">
+        <a href="{{ url_for('index') }}"><img id="logo" alt="logo" src="/static/logo/l.png"></a>
+        <div id="user">
+            <button id="signIn" onclick="on()">Prihlásiť sa</button>
+        </div>
+    </div>
+    <nav>
+        <a href="{{ url_for('index') }}" {% if request.path == url_for('index') %} class="selected" {% endif %}>Domov</a>
+        <p> | </p>
+        <a href="{{ url_for('tasksAll', year=23, round='sk', taskLetter='a') }}" {% if request.path.startswith("/tasks") %} class="selected" {% endif %}>Úlohy</a>
+        <p> | </p>
+        <a href="{{ url_for('submits') }}" {% if request.path == url_for('submits') %} class="selected" {% endif %}>Submity</a>
+        <p> | </p>
+        <a href="{{ url_for('results') }}" {% if request.path == url_for('results') %} class="selected" {% endif %}>Výsledky</a>
+        <p> | </p>
+        <a href="{{ url_for('faq') }}" {% if request.path == url_for('faq') %} class="selected" {% endif %}>FAQ</a>
+        <p> | </p>
+        <a href="{{ url_for('contact') }}" {% if request.path == url_for('contact') %} class="selected" {% endif %}>Kontakt</a>
+    </nav>
+</header>
+
+<main id="main">
+    <div id="loginForm">
+        <div id="overlay" onclick="off()"></div>
+        <div id="login" >
+            <h1>PRIHLÁSENIE</h1>
+            <form id="loginPopUp" method="POST" action="">
+                <input class="user" id="name" placeholder="Login">
+                <input class="user" id="pswd" type="password" placeholder="Heslo">
+                <button id="submit" type="submit"><span>Prihlás ma!</span></button>
+            </form>
+                <a href="">Chcem sa registrovať!</a>
+        </div>
+    </div>
+    {% block main %}{% endblock %}
+</main>
+<footer>
+    <p>Working on it - Emmika 2023</p>
+</footer>
+</body>
+</html>

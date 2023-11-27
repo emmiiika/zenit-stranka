@@ -1,0 +1,29 @@
+<h2 id="Nadpis">Extrémna prokrastinácia</h2>
+<p><em>Počet bodov: 30</em></p>
+<p>Miško by mal pripravovať úlohu do Zenitu. Viete ale ako to chodí, nechce sa mu a tak robí všetko iné, len nie pripravovať úlohu. Našiel si <span class="math inline">\(n\)</span> filmov, ktoré by si chcel pozrieť. Nie je to však také jednoduché. Miško je pokazený dnešnou dobou, a sociálnymi sieťami, takže neudrží pozornosť len na jeden film. Našťastie má 2 obrazovky, a teda môže pozerať dva filmy naraz.</p>
+<p>To však stále nestačí. Je dokázané že každých 5 minút je v každom filme nudná scéna. Na to však Miško má tiež riešenie. Keď začne nudná scéna (pochopiteľne naraz v oboch filmoch ktoré pozerá) pozrie si trailer nejakého iného filmu.</p>
+<h3 id="úloha">Úloha</h3>
+<p>Miška by teraz zaujímalo ako najdlhšie dokáže udržať pozornosť na filmy, a tým oddialiť jeho prácu na úlohách Zenitu. Miško si najprv vyberie 2 filmy ktoré bude pozerať, a potom každých 5 minút si pozrie trailer na nejaký film, ktorý zatiaľ nevidel, ani ho nepozerá. Akonáhle jeden z filmov skončí, alebo začne nudná scéna a Miško už nemá čo pozerať, začne sa nudiť.</p>
+<h3 id="vstup-a-výstup">Vstup a Výstup</h3>
+<p>V prvom riadku vstupu je číslo <span class="math inline">\(n\)</span> (<span class="math inline">\(1 \leq n \leq 10^5\)</span>) udávajúce počet filmov. Ďalej nasleduje <span class="math inline">\(n\)</span> riadkov – každý z nich obsahuje jedno celé číslo <span class="math inline">\(a_i\)</span>, ktoré zodpovedá dĺžke <span class="math inline">\(i\)</span>-teho filmu v 5-minútovkách, pričom platí <span class="math inline">\(1 \leq a_i \leq 10^6\)</span>.</p>
+<p>Vypíš jeden riadok a v ňom jedno celé číslo <span class="math inline">\(k\)</span> - najväčší počet trailerov, ktoré si Miško pozrie, kým sa začne nudiť.</p>
+<h3 id="príklad">Príklad</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>5
+6
+1
+4
+8
+2</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>3</code></pre>
+<p><em>Miško začne pozerať filmy s dĺžkou 6 a 8. Potom si postupne pozrie trailery na zvyšné tri filmy.</em></p>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>4
+2
+1
+2
+1</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>1</code></pre>
+<p><em>Ak Miško začne pozerať filmy s dĺžkou 2 stihne si pozrieť len jeden trailer. Inak by si nestihol pozrieť ani jeden, kým sa skončí film, ktorý pozerá.</em></p>

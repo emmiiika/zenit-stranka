@@ -1,0 +1,26 @@
+<h2 id="Nadpis">Extrémne masívne zadanie</h2>
+<p><em>Počet bodov: 35,</em></p>
+<p>Merlin a Duško sú udatní bojovníci, ktorí už skolili veľa príšer. Keď zabíjajú nejakú príšeru, tá pri tom hrozne kričí, z čoho potom bojovníkom píska v ušiach. Najhoršie je, že výkriky príšer sú veľmi komplikované. Bojovníci by chceli, aby príšera radšej kričala proste len <code>AAAAAAAAAAAAAAAAA…</code>. Používajú preto špeciálne zbrane - keď Merlin príšeru <em>dingne</em> svojím mečom, vie zmeniť vo výkriku príšery jeden konkrétny výskyt písmena na ľubovoľné iné. <em>Dongnutím</em> kladiva si zas Duško vie vybrať nejaké písmeno z výkriku a všetky jeho výskyty posunie o 1 smerom k <code>A</code>.</p>
+<p>Bojovníkov ich útoky stoja rôznu energiu a na zabitie príšery jej chcú dokopy minúť čo najmenej. Pomôžte vymyslieť Merlinovi a Duškovi stratégiu, pri ktorej bude príšera kričať len písmená ‘A’.</p>
+<h3 id="vstup-a-výstup">Vstup a výstup</h3>
+<p>Na prvom riadku vstupu sú 2 čísla, množstvo energie spotrebovanej na <em>Ding</em> a <em>Dong</em>.</p>
+<p>Na druhom riadku je reťazec tvorený veľkými písmenami anglickej abecedy - aktuálny krik príšery.</p>
+<p>Vypíšte jediné číslo - minimálny počet energie minutej na to, aby príšera kričala ‘AAAAAAA…’ - reťazec tvorený len znakmi ‘A’.</p>
+<h3 id="obmedzenia">Obmedzenia</h3>
+<p>Ceny dingu a dongu sú kladné celé čísĺa neprevyšujúce <span class="math inline">\(150\,000\)</span>.</p>
+<p>Vstupy sú rozdelené do 5 sád, platia pre ne nasledovné obmedzenia na dĺžky kriku príšery: <span class="math inline">\(10\)</span>, <span class="math inline">\(100\)</span>, <span class="math inline">\(100\)</span>, <span class="math inline">\(100\,000\)</span>, <span class="math inline">\(100\,000\)</span>.</p>
+<p>Navyše v druhej a štvrtej sade príšera kričí iba písmená ‘A’ a ‘B’.</p>
+<p>Pozor, výsledok môže byť pomerne veľké číslo, no vždy sa zmestí do 64-bitovej premennej.</p>
+<h3 id="príklady">Príklady</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>2 4
+ZJEMVAS</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>12</code></pre>
+<p><em>Najviac sa oplatí aby Merlin dingol všetky písmenká okrem Á-čka</em></p>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>2 4
+BABABABAZ</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>6</code></pre>
+<p><em>Merlin dingne Z a Duško dongne všetky B.</em></p>

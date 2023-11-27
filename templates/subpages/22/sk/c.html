@@ -1,0 +1,42 @@
+<h2 id="Nadpis">Cikcakovité zvieratká</h2>
+<p><em>Počet bodov: 20</em></p>
+<p>Malý Matúško sa práve učí strihať. Maminka mu kúpila vlnkové a špicaté nožničky. Z poličky si zobral atlas zvietatiek. Najviac ho zaujali obrázky hadov a dážďoviek. Zobral si svoje vlnkové a špicaté nožničky a <em>jedno</em> zo zvieratiek rozstrihal na niekoľko častí. Niektoré rezy vznikli špicatými nožničkami, niektoré vlnkovými. Potom jednotlivé časti zamiešal a niektoré pootáčal (v smere zľava doprava). Vašou úlohou je zistiť, či dané zvieratko bolo had alebo dážďovka (iné zvieratká Matúško nestrihal).</p>
+<p>Celá dážďovka vyzerá tak, že má na okrajoch guľaté zátvorky otočené dovnútra a medzi nimi je niekoľko (aspoň 1) znakov <code>=</code>, podľa toho, aké má dlhé telo, napr. <code>(=)</code> alebo <code>(===)</code> alebo <code>(================)</code> .</p>
+<p>Celý had vyzerá tak, že na jednej strane má zátvorku otočenú dovnútra a na druhej má jazyk, teda znak <code>&lt;</code> alebo <code>&gt;</code>, ktorý je ale vždy otočený užšou časťou k hadovi. Telo je tvorené znakmi <code>=</code> (aspoň jedným). Had môže byť napr. <code>(=&lt;</code> alebo <code>(===&lt;</code> alebo <code>(================&lt;</code>, ale aj <code>&gt;=)</code> alebo <code>&gt;===)</code> alebo <code>&gt;================)</code>.</p>
+<p>Rez vlnkovými nožničkami vznikne tak, že sa na danom mieste zvieratko rozdelí na dve časti a na pravý okraj ľavej časti sa pridá znak <code>(</code> a na ľavý okraj pravej časti sa tiež pridá znak <code>(</code>. Napríklad <code>(================)</code> môžeme rozdeliť na <code>(=======(</code> a <code>(=========)</code>.</p>
+<p>Rez špicatými nožničkami vznikne tak, že sa na danom mieste zvieratko rozdelí na dve časti a na pravý okraj ľavej časti sa pridá znak <code>&lt;</code> a na ľavý okraj pravej časti sa tiež pridá znak <code>&lt;</code>. Napríklad <code>(================)</code> môžeme rozdeliť na <code>(=======&lt;</code> a <code>&lt;=========)</code>.</p>
+<h3 id="vstup-a-výstup">Vstup a výstup</h3>
+<p>Na prvom riadku vstupu sa nachádza jediné číslo <span class="math inline">\(1 \leq N \leq 1\,000\)</span> – počet kúskov hada (alebo dážďovky). Nasleduje <span class="math inline">\(N\)</span> riadkov, kde na každom sa nachádza jeden kúsok hada (alebo dážďovky).</p>
+<p>Každý z <span class="math inline">\(N\)</span> riadkov je dlhý aspoň <span class="math inline">\(3\)</span>, a obsahuje dva krajné kúsky hada (alebo dážďovky (alebo pozostatok strihania)), teda jeden zo znakov <code>&lt;</code>, <code>&gt;</code>, <code>(</code>, <code>)</code> a aspoň jeden stredný kúsok (<code>=</code>). Každý riadok je dlhý najviac <span class="math inline">\(50\)</span>.</p>
+<p>Súčet dĺžok všetkých riadkov nepresiahne <span class="math inline">\(25\,000\)</span>.</p>
+<p>Zistite, či je na vstupe had alebo dážďovka. Ak had, vypíšte <code>had</code>, ak dážďovka, vypíšte <code>dazdovka</code>. Je zaručené, že kúsky na vstupe vznikli z hada alebo dážďovky postupom popísaným vyššie.</p>
+<h3 id="príklad">Príklad</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>1
+(=========)</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>dazdovka</code></pre>
+<p><em>Matúško si ani raz nestrihol, zvieratko na vstupe je dážďovka.</em></p>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>3
+&gt;======)
+)======)
+)=)</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>had</code></pre>
+<p><em>Pred rozstrihaním mohlo stvorenie vyzerať napríklad takto: <code>&gt;======))======))=)</code>, čo znamená, že to musel byť had.</em></p>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>2
+&gt;======&lt;
+(======&gt;</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>had</code></pre>
+<p><em>Pred rozstrihaním mohlo stvorenie vyzerať napríklad takto: <code>(======&gt;&gt;======&lt;</code>, čo znamená, že to musel byť had.</em></p>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>3
+(==(
+(==)
+(==(</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>dazdovka</code></pre>
+<p><em>Ak tretí kúsok otočíme, tak zistíme, že pred rozstrihaním mohlo stvorenie vyzerať napríklad takto: <code>(==((==))==)</code>, čo znamená, že to musela byť dážďovka.</em></p>

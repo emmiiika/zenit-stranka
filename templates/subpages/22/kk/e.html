@@ -1,0 +1,73 @@
+<h2 id="Nadpis">Ešte posledná vec</h2>
+<p><em>Počet bodov: 33</em></p>
+<p>Emmika mala už od malička sen - byť vlastníčkou vlastnej bowlingovej dráhy.</p>
+<p>Po úspešnom rozpredaní starožitností, ktoré objavila na intráku pod parketami, si svoj sen konečne zrealizovala.</p>
+<p>Už je skoro všetko hotové, no jeden fakt ju zaskočil - grafiky, ktoré pri bowlingu ukazujú na obrazovke, ktoré kuželky hráč zhodil, sú všetky chránené autorskými právami, a za ich používanie by musela zaplatiť drahú licenciu.</p>
+<p>Však čo, zaobíde sa aj s ASCII artom so Zenitu…</p>
+<h3 id="vstup">Vstup</h3>
+<p>Na jedinom riadku je celé číslo <span class="math inline">\(0 \leq n \leq 10\)</span> - počet zhodených kuželiek.</p>
+<h3 id="výstup">Výstup</h3>
+<p>Na výstup vypíšte všetky možné rozostavenia desiatich bowlingových kuželiek, ak bolo práve <span class="math inline">\(n\)</span> z nich zhodených. Môžete ich vypísať v ľubovoľnom poradí.</p>
+<p>Ako vyzerajú si môžete vidieť v príklade, ale popíšeme to pre kompletnosť.</p>
+<p>Každá grafika má mať štyri riadky.</p>
+<p>Každý riadok má mať sedem znakov.</p>
+<p>V prvom riadku má byť jedna kuželka, v druhom dve, v treťom tri, a v štvrtom štyri.</p>
+<p>Kuželky majú byť oddelené medzerami.</p>
+<p>Pred prvú a za poslednú kuželku v riadku vypíšte toľko medzier, aby boli vycentrované.</p>
+<p>Zhodenú kuželku vykreslite znakom <code>X</code>, a nezhodenú znakom <code>O</code>.</p>
+<p>Za každou grafikou vypíšte prázdny riadok.</p>
+<h3 id="príklad">Príklad</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>1</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>   X   
+  O O  
+ O O O 
+O O O O
+
+   O   
+  X O  
+ O O O 
+O O O O
+
+   O   
+  O X  
+ O O O 
+O O O O
+
+   O   
+  O O  
+ X O O 
+O O O O
+
+   O   
+  O O  
+ O X O 
+O O O O
+
+   O   
+  O O  
+ O O X 
+O O O O
+
+   O   
+  O O  
+ O O O 
+X O O O
+
+   O   
+  O O  
+ O O O 
+O X O O
+
+   O   
+  O O  
+ O O O 
+O O X O
+
+   O   
+  O O  
+ O O O 
+O O O X
+</code></pre>
+<p><em>Toto sú vśetky rozostavenia, kde spadla jedna kuželka. Neprehliadnite medzery za kuželkami, a prázdny riadok aj za poslednou grafikou.</em></p>

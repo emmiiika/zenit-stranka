@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block main %}
+<div id="taskDisplay">
+    <div id="tasks">
+        <form id="roundType" method="POST" action="{{ url_for('taskSelect') }}" >
+            <div class="highlightTitle"><label>Vyber kolo: </label></div>
+            <div class="select">
+                <select id="round" name="round">
+                     <option value="sk" {% if round=='sk' %}selected="selected" {%endif %}>školské</option>
+                     <option value="kk"  {% if round=='kk' %}selected="selected" {%endif %}>krajské</option>
+                     <option value="ck"  {% if round=='ck' %}selected="selected" {%endif %}>celoštátne</option>
+                </select>
+            </div>
+            <div class="select">
+                <select id="year" name="year">
+                    <option value="23" {% if year=='23' %}selected="selected" {%endif %}>2023</option>
+                    <option value="22" {% if year=='22' %}selected="selected" {%endif %}>2022</option>
+                    <option value="21" {% if year=='21' %}selected="selected" {%endif %}>2021</option>
+                </select>
+            </div>
+            <input type="submit" value="zobraziť">
+        </form>
+        <div id="taskList">
+            <div class="highlightTitle"><label>Úlohy:</label></div>
+            {% for i in range(10) %}
+                <a href="{{ url_for('tasksAll', year=year, round=round, taskLetter='abcdefghijklmnopqrstuvwxyz'[i]) }}" {% if taskLetter == 'abcdefghijklmnopqrstuvwxyz'[i] %}class="selected"{% endif %}>Úloha {{ "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[i] }}</a>
+            {% endfor %}
+        </div>
+    </div>
+    <div id="taskText">{% if path %}{% include path %}{% endif %}</div>
+    <div id="submitTask">
+        <form id="chooseFile" action="{{ url_for('uploadFile') }}" method="POST" enctype="multipart/form-data">
+            <label>Odovzdať úlohu: </label>
+            <input type="file" name="file" id="fileInput">
+            <input type="submit">
+        </form>
+
+        <div id="lastSubmits">
+
+        </div>
+    </div>
+</div>
+{% endblock %}

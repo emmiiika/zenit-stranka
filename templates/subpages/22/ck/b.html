@@ -1,0 +1,34 @@
+<h2 id="Nadpis">Bojíme sa proofreadu</h2>
+<p><em>Počet bodov: 15</em></p>
+<p>Prípravy Zenitu boli v plnom prúde, zadania sa začali objavovať na gite, aby ale boli úplne dokonalé, bolo ich treba sproofreadovať.</p>
+<p>Preto Hodobox urobil rozpis, ktorý vedúci bude proofreadovať prácu ktorého vedúceho.</p>
+<p>Problém ale vznikol o chvíľu. Keďže Hodoboxovi veľmi záleží na duševnom zdraví a psychohygiene vedúcich, chcel by vedieť, či existujú ľudia, ktorí nie len úlohy proofreadujú, ale aj im niekto proofreaduje ich prácu.</p>
+<h3 id="úloha">Úloha</h3>
+<p>Vašou úlohou je povedať, či existuje aspoň jeden vedúci, ktorý nie len úlohy proofreaduje, ale zároveň aj je proofreadovaný.</p>
+<h3 id="vstup-a-výstup">Vstup a Výstup</h3>
+<p>Na prvom riadku sa nachádza jediné číslo <span class="math inline">\(t\)</span> – počet testovací sád, na ktorých bude váš program testovaný. Nasleduje <span class="math inline">\(t\)</span> vstupov, kde každý má takýto formát:</p>
+<p>Vstup začína dvojicou medzerou oddelených čísel <span class="math inline">\(n, p\)</span> – počet vedúcich a počet dvojíc vedúcich, kde prvý z dvojice proofreaduje prácu druhého.</p>
+<p>Nasleduje <span class="math inline">\(p\)</span> riadkov, kde každý riadok obsahuje dvojicu čísel <span class="math inline">\(a, b\)</span> kde <span class="math inline">\(0 \leq a,b &lt; n\)</span> a <span class="math inline">\(a \neq b\)</span>, ktorá znamená, že vedúci <span class="math inline">\(a\)</span> kontroluje prácu vedúceho <span class="math inline">\(b\)</span>.</p>
+<p>Na výstup vypíšte <code>Proofreaderi su proofreadovani</code> ak existuje nejaký vedúci, ktorý nie len proofreaduje, ale aj je proofreadovaný. Ak taký vedúci neexistuje, vypíšte <code>Proofreaderi proofreaduju</code>.</p>
+<p>Platí <span class="math inline">\(0 \leq p \leq n\)</span>.</p>
+<p>V prvej sade <span class="math inline">\(t \leq 10\)</span> a <span class="math inline">\(n \leq 1000\)</span>.</p>
+<p>V druhej sade <span class="math inline">\(t \leq 5\)</span>, <span class="math inline">\(n \leq 100,000\)</span> a súčet <span class="math inline">\(p \leq 100,000\)</span>.</p>
+<h3 id="príklady">Príklady</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>1
+4 3
+1 2
+0 3
+1 3</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>Proofreaderi proofreaduju</code></pre>
+<p><em>Proofreadovaní sú vedúci 2 a 3, zatiaľ čo proofreadujú vedúci 0 a 1.</em></p>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>1
+4 3
+1 2
+3 2
+2 1</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>Proofreaderi su proofreadovani</code></pre>
+<p><em>V tomto prípade sú proofreadovaní vedúci 1 a 2, zatiaľ čo proofreadujú vedúci 1, 2 a 3 takže vedúci 1 aj proofreaduje a aj je proofreadovaný.</em></p>

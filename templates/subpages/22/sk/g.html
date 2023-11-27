@@ -1,0 +1,25 @@
+<h2 id="Nadpis">Goniometria</h2>
+<p><em>Počet bodov: 45</em></p>
+<p>Iveta mala mať zajtra prednášku o goniometrii. Nanešťastie však pri venčení svojho polárneho medvedíka prechladla, a tak ju musí zrušiť.</p>
+<p>Keďže je to prvá prednáška dňa, nestačí len nalepiť oznam na dvere - tí, čo si ho prečítajú a zistia, že prednáška nie je, by už premárnili šancu túto informáciu využiť a ostať dlhšie v posteli.</p>
+<p>Rozhodla sa teda, že svojim študentom napíše emailovú správu. To má výhodu, že email si každý študent ešte v ten večer zaručene prečíta. Má to však nevýhodu, že Iveta musí napísať každému študentovi, ktorý chodí na jej prednášky, po jednom. A to je kopa práce.</p>
+<p>Iveta však vie, že sa niektorí jej študenti medzi sebou rozprávajú. Ak sa študent <code>A</code> rozpráva so študentom <code>B</code>, a Iveta pošle email napríklad študentovi <code>A</code>, tak ten to povie <code>B</code>. Ak sa <code>B</code> navyše rozpráva so študentkami <code>C</code> a <code>D</code>, tak im o tom povie, a tak ďalej. Takto sa informácia o zrušenej prednáške vie rozšíriť k viacerým študentom vďaka jedinému emailu.</p>
+<p>Pomôžte Ivete - zistite, koľko najmenej emailov musí rozposlať, aby sa o zrušenej prednáške dozvedeli všetci jej študenti.</p>
+<h3 id="vstup-a-výstup">Vstup a výstup</h3>
+<p>V prvom riadku vstupu je číslo <span class="math inline">\(N\)</span> - počet študentov, ktorí chodia na Ivetinu prednášku. Sú očíslovaní od <span class="math inline">\(1\)</span> po <span class="math inline">\(N\)</span>.</p>
+<p>V druhom riadku je číslo <span class="math inline">\(I\)</span> - počet dvojíc študentov, o ktorých Iveta vie, že sa navzájom rozprávajú.</p>
+<p>V každom z nasledujúcich <span class="math inline">\(I\)</span> riadkov sú dve čísla študentov <span class="math inline">\(a\)</span> a <span class="math inline">\(b\)</span>, ktorí sa medzi sebou rozprávajú.</p>
+<p>Vypíšte jedno číslo - počet emailov ktoré musí Iveta poslať aby sa informáciu každý dozvedel.</p>
+<h3 id="obmedzenia">Obmedzenia</h3>
+<p>Platí <span class="math inline">\(1 \leq N \leq 200\,000\)</span>, <span class="math inline">\(0 \leq I \leq 3N\)</span>, <span class="math inline">\(1 \leq a &lt; b \leq N\)</span>. Zároveň žiadna dvojica <span class="math inline">\(a\, b\)</span> nebude na vstupe viackrát.</p>
+<p>Nech <span class="math inline">\(K\)</span> je najväčší počet študentov, ktorí sa nakoniec dozvedia o zrušenej prednáške, ak Iveta pošle jeden email (t.j. najväčšia skupinka študentov, ktorí sa (ne)priamo rozprávajú).</p>
+<p>V prvej sade platí <span class="math inline">\(K \leq 3\)</span>, v druhej <span class="math inline">\(K \leq 4\)</span> a v tretej <span class="math inline">\(K \leq N\)</span>.</p>
+<h3 id="príklad">Príklad</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>5
+2
+2 3
+2 4</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>3</code></pre>
+<p><em>Prvý a piaty študent sa s nikým nerozprávajú, Iveta im teda musí poslať email. Potom stačí tretí email poslať hociktorému študentovi z 2, 3, 4, tí si to medzi sebou (možno cez 2.) povedia.</em></p>

@@ -1,0 +1,45 @@
+<h2 id="Nadpis">Isté veci máme radi</h2>
+<p><em>Počet bodov: 55</em></p>
+<p>Hodobox má isté veci rád. Rád delí svoj čas na rekreačný a spánkový. Rád sčítava svoje body za úlohy na SPOJi. Rád chodí do nového roku, keď už nemusí písať dátumy do zošitov. Rád zneužíva svoju moc nad riešiteľmi ZENITu. Má rád číslo <span class="math inline">\(47\)</span>.</p>
+<p>Dávid chce spraviť Hodoboxovi radosť, a umožniť mu robiť tieto aktivity naraz - delenie, sčítavanie, 2023kovanie, 47kovanie, umocňovanie.</p>
+<p>Rozhodol sa Hodoboxovi darovať program, ktorý bude robiť všetky tieto veci.</p>
+<p>A aby z toho nevynechal aj riešiteľov ZENITu, nechá tento darček pripraviť vás.</p>
+<h3 id="úloha">Úloha</h3>
+<p>Postup:</p>
+<p>Zoberieme rok <span class="math inline">\(2023\)</span>.</p>
+<p>Umocníme ho na nejakú mocninu <span class="math inline">\(X\)</span>.</p>
+<p>Nájdeme všetky celočíselné delitele tohto čísla.</p>
+<p>Sčítame ich.</p>
+<p>Nájdeme zvyšok tohto súčtu po delení číslom <span class="math inline">\(47\)</span>.</p>
+<p>Tento zvyšok vypíšeme na výstup.</p>
+<p>Program čo toto zvládne submitneme.</p>
+<p>Získame body v ZENITe.</p>
+<h3 id="vstup-a-výstup">Vstup a Výstup</h3>
+<p>V prvom riadku vstupu je číslo <span class="math inline">\(T\)</span>, určujúce koľko krát si Hodobox chce spraviť radosť.</p>
+<p>V každom z ďalších <span class="math inline">\(T\)</span> riadkov je jedno celé číslo <span class="math inline">\(X\)</span> - mocninu, ktorú Hodobox túži použiť.</p>
+<p>Pre každé <span class="math inline">\(X\)</span> vypíšte výsledok ako bol popísaný v úlohe, teda súčet všetkých deliteľov <span class="math inline">\(2023^X\)</span>, modulo <span class="math inline">\(47\)</span>.</p>
+<p>V prvej sade <span class="math inline">\(T = 5\)</span> a <span class="math inline">\(1 \leq X \leq 5\)</span>.</p>
+<p>V druhej sade <span class="math inline">\(T = 50\)</span> a <span class="math inline">\(1 \leq X \leq 50\)</span>.</p>
+<p>V tretej sade <span class="math inline">\(T = 5\)</span> a <span class="math inline">\(1 \leq X \leq 10000\)</span>.</p>
+<p>V štvrtej sade <span class="math inline">\(T = 1\)</span> a <span class="math inline">\(1 \leq X \leq 50000\)</span>.</p>
+<p>V piatej sade <span class="math inline">\(T = 100\)</span> a <span class="math inline">\(1 \leq X \leq 10^9\)</span>.</p>
+<h3 id="príklady">Príklady</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>3
+1
+2
+3</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>12
+3
+3</code></pre>
+<p><em><span class="math inline">\(2023^2 = 4092529\)</span>. Jeho deliteľe sú <span class="math inline">\(1, 7, 17, 49, 119, 289, 833, 2023, 4913, 14161, 34391, 83521, 240737, 584647, 4092529\)</span>. Ich súčet je <span class="math inline">\(5058237\)</span>. <span class="math inline">\(5058237 = 107622 \cdot 47 + 3\)</span>.</em></p>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>3
+10
+20
+30</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>32
+31
+12</code></pre>

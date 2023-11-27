@@ -1,0 +1,23 @@
+<h2 id="Nadpis">Je to dôležitá veda</h2>
+<p><em>Počet bodov: 60</em></p>
+<p>Koľko batoliat je potrebných na výmenu žiarovky? Kolko dážďoviek napíše náhodným pohybom po písacích strojoch Hamleta za rok? Koľko dní je potrebných na odoslanie gumenných koní? Dôležité otázky. Je možné robiť experimenty, pri ktorých pre konkrétne číslo zistíte, či je postačujúce alebo nie. Odpoveď však treba zistiť rýchlo. Našťastie ste po rokoch analýzy výpočtovej a pamäťovej zložitosti už dostatočne otupení na to, aby vás nezaujímalo presné číslo, ale iba dolný a horný odhad.</p>
+<h3 id="úloha">Úloha</h3>
+<p>Zaujíma vás približný dolný a horný odhad. Pre jednoduchosť vám už nejaké počiatočné odhady poskytneme - <span class="math inline">\(d\)</span> je ešte príliš málo, ale <span class="math inline">\(h\)</span> už je dosť. Dostanete zadanú požadovanú presnosť a vašou úlohou je zistiť, koľko najmenej meraní je ešte nutné vykonať, aby bol pomer horného a dolného odhadu nanajvýš daná presnosť.</p>
+<h3 id="vstup-a-výstup">Vstup a Výstup</h3>
+<p>V prvom riadku vstupu je číslo <span class="math inline">\(1 \leq O \leq 10^4\)</span> - počet otázok na vstupe. Nasleduje <span class="math inline">\(O\)</span> riadkov, na každom tri celé čísla <span class="math inline">\(d_i\)</span>, <span class="math inline">\(h_i\)</span>, <span class="math inline">\(p_i\)</span> - dolný odhad, horný odhad a požadovaná presnosť, pricom <span class="math inline">\(1 \leq d_i \leq h_i \leq 10^9\)</span> a <span class="math inline">\(2 \leq p_i \leq 10\)</span>.</p>
+<p>Na výstup vypíšte <span class="math inline">\(O\)</span> riadkov, na každom z nich odpoveď na príslušnú otázku - koľko najmenej meraní je potrebných spraviť aby bol pomer horného a dolného odhadu nanajvýš požadovaná presnosť.</p>
+<p>Vstup bude obsahovať viacero obtiažností sád. Bude <span class="math inline">\(8\)</span> sád, v <span class="math inline">\(s\)</span>-tej bude <span class="math inline">\(h_i \leq 10^{1+s}\)</span>. Navyše v prvých dvoch bude <span class="math inline">\(p_i = 2\)</span>.</p>
+<h3 id="príklady">Príklady</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>4
+7 15 2
+7 15 3
+5 46 3
+9 150 2</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>1
+0
+2
+3</code></pre>
+<p><em>Pre prvú otázku môžeme otestovať napríklad 10. Ak experiment vyjde, naše odhady budú 7,10 a ak nevyjde, tak 10,15. Bezohľadu na výsledok tak na jedno meranie dosiahneme dostatočnú presnosť.</em></p>
+<p><em>Pre tretiu otázku môžeme otestovať napríklad 16. Ak experiment vyjde, náš horný odhad bude 16, čo nie je dosť presné s dolným odhadom 5, a budeme musieť experimentovať znovu. Ak by sme však otestovali 15, a experiment nevyjde, náš dolný odhad bude 15, čo zas nie je dosť presné s horným odhadom 46. Tým pádom potrebujeme bezohľadu na našu stratégiu v najhoršiom prípade aspoň dva experimenty (a s nimi to už zvládneme).</em></p>

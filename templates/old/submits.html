@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Zenit</title>
+    <link rel="stylesheet" type="text/css" href="//static/styles.css">
+    <link rel="icon" type="image/x-icon" href="//static/favicon/favicon.ico">
+    <script src="/static/helpers.js"></script>
+</head>
+<body onload="includeHTML()">
+<header>
+    <div id="headBar">
+        <a href="index.html"><img id="logo" alt="logo" src="//static/logo/l.png"></a>
+        <div id="user">
+            <button id="signIn" onclick="on()">Prihlásiť sa</button>
+        </div>
+    </div>
+</header>
+<nav>
+    <a href="index.html">Domov</a>
+    <p> | </p>
+    <a href="tasks.html">Ulohy</a>
+    <p> | </p>
+    <a href="submits.html" class="selected">Submity</a>
+    <p> | </p>
+    <a href="results.html">Vysledky</a>
+    <p> | </p>
+    <a href="faq.html">FAQ</a>
+    <p> | </p>
+    <a href="contact.html">Kontakt</a>
+</nav>
+<main>
+    <div id="loginForm" include-html="login.html"></div>
+</main>
+<footer>
+    <p>Working on it - Emmika 2023</p>
+</footer>
+</body>
+</html>

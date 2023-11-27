@@ -1,0 +1,35 @@
+<h2 id="Nadpis">Hranolky na MatFyze sú z nich</h2>
+<p><em>Počet bodov: 50</em></p>
+<p>Byť programátorom môže byť ťažké. Stále niečo nefunguje, zabíjate hodiny nad nepochopiteľnými chybovými hláškami, na jedinej relevatnej stack overflow otázke autor odpovedá len ‘už som to nejak vyriešil’.</p>
+<p>Preto sa Dávid stal farmárom. Byť farmárom je jednoduché. Zakopete zemiak, a neskôr vykopete viac zemiakov. O to jednoduchšie to pre Dávida je, že si zo svojho kódu pripravil inovatívne hnojivo, vďaka ktorému sa zemiaky rozmnožia už za jednu noc.</p>
+<p>Presnejšie, každý zemiak sa za noc rozmnoží na <span class="math inline">\(Z\)</span> zemiakov, a ďalšiu noc sa z každého z nich znova stane <span class="math inline">\(Z\)</span> zemiakov, a tak ďalej.</p>
+<p>Dávid je navyše jasnovid, a tak vie že ak by takto produkoval zemiaky príliš dlho, bolo by to podozrivé. Preto chce predávať zemiaky len <span class="math inline">\(N\)</span> dní, a aby nezanechal žiadne stopy, tak chce aby mu po nich neostali žiadne zemiaky.</p>
+<p>Dávid má navyše rád rutinu. Preto by chcel každé ráno vykopať a predať nejaký rovnaký počet zemiakov, <span class="math inline">\(P\)</span>; na presnej hodnote mu nezáleží, len aby to bolo konzistentné.</p>
+<p>Dávid je navyše lenivý, a nechce sa mu sadiť veľa zemiakov. Preto ich bude sadiť iba raz, a aj vtedy chce aby počet zemiakov ktoré zasadí, <span class="math inline">\(S\)</span>, bolo čo najmenšie.</p>
+<p>Dávid navyše pripravuje úlohy do zenitu, a tak nájdenie vhodných čísel <span class="math inline">\(P\)</span> a <span class="math inline">\(S\)</span> nechá na vás.</p>
+<h3 id="úloha">Úloha</h3>
+<p>Dané sú celé čísla <span class="math inline">\(Z\)</span> a <span class="math inline">\(N\)</span> - ako sa zemiaky rozmnožujú, a koľko dní chce Dávid predávať zemiaky. Dávid chce večer zasadiť nejaký čo najmenší počet zemiakov <span class="math inline">\(S\)</span>. Musí pritom platiť, že ak sa z každého zemiaku cez noc stane <span class="math inline">\(Z\)</span> zemiakov, a každé ráno Dávid presne <span class="math inline">\(P\)</span> z nich vykope a predá, tak to bude môcť robiť <span class="math inline">\(N\)</span> dní, po ktorých mu neostanú žiadne zemiaky.</p>
+<p>Nájdite čísla <span class="math inline">\(S\)</span> a <span class="math inline">\(P\)</span>, pre ktoré sa mu to podarí. Ak existuje viacero riešení, vypíšte to s najemnším <span class="math inline">\(S\)</span>.</p>
+<h3 id="vstup-a-výstup">Vstup a Výstup</h3>
+<p>V prvom riadku je celé číslo <span class="math inline">\(T\)</span> - počet alternatívnych realít, v ktorých Dávid pestuje zemiaky.</p>
+<p>V každom z ďalších <span class="math inline">\(T\)</span> riadkov sú dve čísla <span class="math inline">\(Z\)</span> a <span class="math inline">\(N\)</span> - ako sa zemiaky rozmnožujú, a koľko dní chce Dávid predávať zemiaky.</p>
+<p>Pre každé <span class="math inline">\(N\)</span> a <span class="math inline">\(Z\)</span> vypíšte čo najmenšie <span class="math inline">\(S\)</span> a k nemu korešpondujúce <span class="math inline">\(P\)</span>, tak, aby vedel Dávid zasadiť <span class="math inline">\(S\)</span> zemiakov, a <span class="math inline">\(N\)</span> krát nechat zemiaky sa rozmnožiť a následne <span class="math inline">\(P\)</span> z nich vykopať a predať, pričom po <span class="math inline">\(N\)</span> dňoch bude mať nula zemiakov.</p>
+<p>Keďže tieto čísla môžu byť veľké, stačí ak ich vypíšete modulo <span class="math inline">\(10^9+7\)</span>.</p>
+<p>Platí <span class="math inline">\(1 \leq T \leq 1000\)</span>.</p>
+<p>V prvej sade <span class="math inline">\(2 \leq Z \leq 100\)</span> a <span class="math inline">\(N = 1\)</span>.</p>
+<p>V druhej <span class="math inline">\(2 \leq Z \leq 100\)</span> a <span class="math inline">\(1 \leq N \leq 2\)</span>.</p>
+<p>V tretej až piatej sade platí <span class="math inline">\(2 \leq Z \leq 10^5\)</span> a <span class="math inline">\(1 \leq N \leq 10^5\)</span>.</p>
+<h3 id="príklady">Príklady</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>4
+2 2
+2 3
+3 4
+47 47</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>3 4
+7 8
+40 81
+932085956 875953683</code></pre>
+<p><em>V prvej realite Dávid večer zakope 3 zemiaky. Na prvý deň ich bude 6, Dávid štyri z nich vykope a predá. Z dvoch zvyšních zemiakov sa stanú štyri, a na druhý deň ich všetky vykope a predá. Po dvoch dňoch mu teda úspešne neostali žiadne zemiaky.</em></p>
+<p><em>Ak by chcel dávid predávať zdvojnásobujúce zemiaky tri dni, musí zakopať aspoň 7 zemiakov, a pri siedmych mu to na práve tri dni vyjde, ak každý deň predá 8.</em></p>

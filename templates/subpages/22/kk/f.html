@@ -1,0 +1,29 @@
+<h2 id="Nadpis">Fáranie</h2>
+<p><em>Počet bodov: 35</em></p>
+<p>Marcelka si skracuje dni hraním jej obľúbenej hry Kopzhotovuj, známej svojim kockatým svetom.</p>
+<p>Polovicu času kope, polovicu zhotovuje. Nielenže je kopanie nudnejšie, je aj nebezpečnejšie, lebo sa Marcelka vie stratiť. Po štvrtom blúdení sa rozhodla kopať len podľa stratégie vyvinutej skupinou KSP (Kopzhotovujskí Strategickí Plánovači), ktorá minimalizuje šancu zablúdenia.</p>
+<p>Tá hovorí, že si máme zvoliť miesto na kopanie, a kopať smerom dole kým nenarazíme na spodok mapky. Počas kopania dole možno narazíme na kocku zlata. Ak hej, po jej vykopaní sa obzrieme doľava a doprava, či sme nenarazili na zlatú žilu (susediace kocky zlata). Ak áno, vykopeme ju (ale len na tejto úrovni - ak začneme kopať hore či dole, ľahšie sa stratíme). Keď všetky horizontálne susediace kocky zlata vykopeme, vrátime sa k našej šachte, a kopeme dodola ďalej s rovnakým postupom. Keď dosiahneme spodok mapky, vrátime sa na povrch.</p>
+<p>Marcelkin kamarát Sabin získal svojimi hackerskými schopnosťami dáta o Marcelkinej mapke. Chcel by jej poradiť, kde má začať kopať, aby vykopala toľko zlata, koľko potrebuje (na postavenie zlatej sochy škrečka v nadživotnej veľkosti).</p>
+<p>Z hackovania je však vyčerpaný, a preto potrebuje vašu pomoc.</p>
+<h3 id="vstup">Vstup</h3>
+<p>V prvom riadku vstupu sú čísla <span class="math inline">\(r\)</span> a <span class="math inline">\(s\)</span> - počet riadkov a stĺpcov úseku, o ktorom má Sabin dáta. Pod posledným riadkom je spodok mapky.</p>
+<p>V každom z nasledujúcich <span class="math inline">\(r\)</span> riadkov je <span class="math inline">\(s\)</span> znakov, reprezentujúc horniny v danom úseku. Znak <code>.</code> reprezentuje kameň, znak <code>#</code> zlato.</p>
+<p>V prvej sade platí <span class="math inline">\(1 \leq r,s \leq 100\)</span>. V druhej platí <span class="math inline">\(1 \leq r,s \leq 1500\)</span>.</p>
+<h3 id="výstup">Výstup</h3>
+<p>Vypíšte jeden riadok a v ňom <span class="math inline">\(s\)</span> čísel - <span class="math inline">\(i\)</span>-te z nich má byť počet kociek zlata, ktoré Marcelka vykope, ak si svoju šachtu spraví v <span class="math inline">\(i\)</span>-tom stĺpci.</p>
+<h3 id="príklad">Príklad</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>5 6
+#..#..
+#####.
+.###.#
+.#.#..
+..#...</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>6 9 9 10 5 1</code></pre>
+<p><em>Znakmi x vyznačíme, ktoré kocky by Marcelka vykopala z každého začiatočného stĺpca. Veľkými X vyznačíme, že to bola kocka zlata.</em></p>
+<pre><code>X..#.. #x.#.. #.x#.. #..X.. #..#x. #..#.x
+XXXXX. XXXXX. XXXXX. XXXXX. XXXXX. #####x
+x###.# .XXX.# .XXX.# .XXX.# .###x# .###.X
+x#.#.. .X.#.. .#x#.. .#.X.. .#.#x. .#.#.x
+x.#... .x#... ..X... ..#x.. ..#.x. ..#..x</code></pre>

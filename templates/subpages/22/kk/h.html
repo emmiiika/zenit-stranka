@@ -1,0 +1,43 @@
+<h2 id="Nadpis">Hodiny geometrie</h2>
+<p><em>Počet bodov: 50</em></p>
+<p>Ivana získala vysnívanú prácu - vyučuje deti matematiku.</p>
+<p>Keď učí geometriu, potrebuje často nakresliť nejaké mnohouholníky, s ktorými sa potom tá všakovaká geometria bude robiť. Aby to však nemusela zakaždým improvizovať, pripravila si pomôcku.</p>
+<p>Nakreslila si pravidelný konvexný mnohouholník s <span class="math inline">\(N\)</span> stranami. Potom na každú stranu nakreslila niekoľko bodov - na <span class="math inline">\(i\)</span>-tu stranu ich nakreslila <span class="math inline">\(a_i\)</span>.</p>
+<p>Keď bude potom na hodine potrebovať nejaký mnohouholník s <span class="math inline">\(N-1\)</span> stranami, zoberie si ten pomocný, a pospája <span class="math inline">\(N-1\)</span> z týchto bodov tak, aby jej vznikol konvexný mnohouholník s <span class="math inline">\(N-1\)</span> stranami. Musí si pritom dávať pozor, aby vzniknutý mnohouholník mal kladný obsah, a taktiež si dá záležať, aby vnútorný uhol pri každom vrchole bol ostro menší ako 180 stupňov.</p>
+<p>Nie je si však istá, na ako dlho jej táto pomôcka bude stačiť. Ivana ale nemá čas si to zrátať, keďže musí opravovať písomky z goniometrie…</p>
+<h3 id="úloha">Úloha</h3>
+<p>Daný je počet bodov, ktoré si Ivana nakreslila na strany pravidelného <span class="math inline">\(N\)</span>-uholníka. Nie je podstatné kde presne, stačí vám vedieť, že sú navzájom rôzne a niesu vrcholmi originálneho mnohouholníka.</p>
+<p>Zistite, koľko rôznych ostro konvexných <span class="math inline">\(N-1\)</span> mnohouholníkov s kladným obsahom vie Ivana získať tak, že pospája <span class="math inline">\(N-1\)</span> z týchto bodov. Dva mnohouholníky považujeme za rôzne, ak majú ako vrcholy rôzne body.</p>
+<p>Keďže toto číslo môže byť priveľké, stačí ak vypíšete jeho zvyšok po delení <span class="math inline">\(10^9+7\)</span>.</p>
+<h3 id="vstup-a-výstup">Vstup a Výstup</h3>
+<p>V prvom riadku vstupu je číslo <span class="math inline">\(N\)</span> - počet strán mnohouholníka. V druhom riadku vstupu je <span class="math inline">\(N\)</span> nezáporných čísel <span class="math inline">\(a_1, a_2, \cdots, a_N\)</span>: počet nakreslených bodov na jeho stranách.</p>
+<p>Vypíšte počet rôznych mnohouholníkov vie Ivana získať tak, ako je popísané v úlohe, mod <span class="math inline">\(10^9+7\)</span>.</p>
+<h3 id="obmedzenia">Obmedzenia</h3>
+<p>Platí <span class="math inline">\(4 \leq N \leq 1000\)</span> a <span class="math inline">\(0 \leq a_i \leq 1000\)</span>.</p>
+<p>V prvej sade navyše <span class="math inline">\(N \leq 10\)</span> a <span class="math inline">\(a_i \leq 2\)</span>.</p>
+<p>V druhej sade zasa <span class="math inline">\(N \leq 10\)</span> a <span class="math inline">\(a_i \leq 1000\)</span>.</p>
+<p>V tretej sade <span class="math inline">\(N \leq 1000\)</span> a <span class="math inline">\(a_i \leq 2\)</span>.</p>
+<p>V štvrtej a piatej sade neplatia žiadne obmedzenia navyše.</p>
+<h3 id="príklady">Príklady</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>4
+1 1 1 1</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>4</code></pre>
+<p><em>Máme v podstate štyri možnosti, ktorý bod vynecháme.</em></p>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>4
+2 2 1 1</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>20</code></pre>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>4
+3 1 1 1</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>19</code></pre>
+<p><em>Buď posápajme body z druhej až štvrtej strany (1), alebo dva z nich s jedným z prvej strany (3 možnosti ako zvoliť dva body z tých troch strán, 3 možnosti ako zvoliť jeden bod z prvej = 9), alebo dva body z prvej strany s jedným bodom zo zvyšních (3 možnosti ako zvoliť dva body z prvej strany, 3 možnosti ako zvoliť posledný bod = 9), dokopy 19 možností.</em></p>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>5
+47 0 7 8 9</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>392903</code></pre>

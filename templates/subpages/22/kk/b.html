@@ -1,0 +1,27 @@
+<h2 id="Nadpis">Bude iná večera</h2>
+<p><em>Počet bodov: 15</em></p>
+<p>Janka s Jarkom každý deň večerajú v Jarkovej obľúbenej reštaurácii - Pandos. Pandos ponúka množstvo jedál označených číslom od -X do X podľa pálivosti. Jarko je pri jedle veľmi vyberavý a chce len to jedlo, o ktorom vie, že mu chutí. Preto si vždy objednajú rovnakých <span class="math inline">\(N\)</span> jedál a vždy ich majú v rovnakom poradí. Janka mu na to často frfle, lebo by rada mala inú večeru. Dnes je Jankin šťastný deň, lebo Jarko súhlasil, že vyskúša niečo nové! Svojich <span class="math inline">\(N\)</span> jedál objedná v inom poradí.</p>
+<p>No Janku s Jarkom už gniavi hlad a nechce sa im hľadať nové poradie, v ktorom si jedlo môžu objednať. Spravte to za ních, prosím, vy!</p>
+<h3 id="úloha">Úloha</h3>
+<p>Spravte Janke radosť a nájdite nové poradie, v ktorom si môžu jedlo objednať.</p>
+<p>Ak nie je možné jedlo objednať v žiadnom inom poradí, než zvyčajne, dajte Jarkovi vedieť, že aj dnes večer bude Janka frflať.</p>
+<h3 id="vstup-a-výstup">Vstup a Výstup</h3>
+<p>Na prvom riadku vstupu je číslo <span class="math inline">\(N\)</span> - počet jedál, ktoré si Jarko s Jankou objednávajú.</p>
+<p>V ďalšom riadku sa nachádza <span class="math inline">\(N\)</span> čísiel <span class="math inline">\(X_i\)</span> - poradie jedál tak, ako si ich Janka s Jarkom objednávajú.</p>
+<p>V prvej sade platí <span class="math inline">\(N \leq 1000\)</span> a <span class="math inline">\(-1000 \leq X \leq 1000\)</span>.</p>
+<p>V druhej sade platí <span class="math inline">\(N \leq 100000\)</span> a <span class="math inline">\(-1000 \leq X \leq 1000\)</span>.</p>
+<p>V tretej sade platí <span class="math inline">\(N \leq 100000\)</span> a <span class="math inline">\(-10^{18} \leq X \leq 10^{18}\)</span>.</p>
+<p>Do nového riadku vypíšte nové poradie jedál, v ktorom si Janka s Jarkom môžu objednávať. Ak také poradie neexistuje, vypíšte namiesto toho <code>Janka bude frflat</code>.</p>
+<h3 id="príklad">Príklad</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>6
+1 2 3 4 5 6</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>6 5 4 3 2 1</code></pre>
+<p><em>Keď objednáme jedlá v opačnom poradí, Janka bude mať zmenu. Existuje samozrejme veľa iných správnych riešení.</em></p>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>1
+47</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>Janka bude frflat</code></pre>
+<p><em>Keďže Janka s Jarkom vždy jedávajú len jedno jedlo, nemôžu zmeniť poradie objednávania.</em></p>

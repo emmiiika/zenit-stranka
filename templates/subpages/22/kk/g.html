@@ -1,0 +1,32 @@
+<h2 id="Nadpis">Gombíky vedľa seba</h2>
+<p><em>Počet bodov: 45</em></p>
+<p>Miška kupuje len tie najčerstvejšie, najlokálnejšie a najkvalitnejšie potraviny od babičky na kraji dediny.</p>
+<p>Babička jej vždy zráta sumu ktorú má zaplatiť na kalkulačke. Zatiaľ čo čísla sú na nej umiestnené rozumne, gombíky plus a krát sú vedľa seba, a babička si nie vždy správne spomenie, ktorý z nich to mala stláčať.</p>
+<p>Preto sa Miške občas stane, že neplatí súčet cien potravín, ale ich súčin.</p>
+<p>Potraviny s takými vlastnosťami ale nikde inde v dedine nezoženie. Rozhodla sa tak, že bude kupovať potraviny tak, aby súčin ich cien bol rovnaký ako ich súčet.</p>
+<p>Mohla by teda napríklad kupovať potraviny po jednej, ale to by bola oštara. Ak si kúpi potraviny so správnymi cenami, bude to vychádzať, aj keď ich bude viac…</p>
+<h3 id="úloha">Úloha</h3>
+<p>Pomôžte Miške, nech môže kupovať štyri potraviny naraz.</p>
+<p>Nájdite všetky štvorice cien (v eurách a centoch), ktorích súčin je rovnaký ako ich súčet.</p>
+<p>Keďže Miška nehodlá rozhadzovať peniazmi, ale ani sa priveľmi uskromniť, stačí ak nájdete tie štvorice, ktorých súčet (a súčin) je aspoň <span class="math inline">\(X\)</span> ale najviac <span class="math inline">\(Y\)</span> centov.</p>
+<h3 id="vstup-a-výstup">Vstup a Výstup</h3>
+<p>Na prvom riadku vstupu sú dve medzerou oddelené čísla <span class="math inline">\(1 \leq X \leq Y\)</span> - dolná a horná hranica sumy, ktorú chce Miška zaplatiť za potraviny (v centoch).</p>
+<p>V prvej sade je <span class="math inline">\(Y \leq 100\)</span>. V druhej <span class="math inline">\(Y \leq 1\,000\)</span>. V tretej <span class="math inline">\(Y \leq 2\,000\)</span>.</p>
+<p>Vypíšte toľko riadkov, koľko je štvoríc cien s rovnakým súčinom ako súčtom, ktorý je aspoň <span class="math inline">\(X\)</span> ale najviac <span class="math inline">\(Y\)</span>.</p>
+<p>Môzete ich vypísať v ľubovoľnom poradí, ale každú práve raz.</p>
+<p>Vždy vypíšte dve číslice za desatinnou čiarkou (počet centov v cene).</p>
+<h3 id="príklad">Príklad</h3>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>100 100</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code></code></pre>
+<p><em>Žiadna štvorica potravín nemá súčet aj súčin jedno euro</em></p>
+<p><strong>Input:</strong></p>
+<pre class="iobox"><code>644 666</code></pre>
+<p><strong>Output:</strong></p>
+<pre class="iobox"><code>1.00 1.75 1.90 2.00
+1.10 1.50 2.00 2.00
+1.25 1.25 1.92 2.21
+1.25 1.40 1.86 2.00
+1.25 1.60 1.75 1.84</code></pre>
+<p><em>Napríklad <span class="math inline">\(1.00+1.75+1.90+2.00 = 1.00 \cdot 1.75 \cdot 1.90 \cdot 2.00 = 6.65\)</span></em></p>
